@@ -3,26 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/Splashscreen_Nav">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="ro.rsbideveloper.rsbi.FirstFragment"
+        android:id="@+id/Splashscreen_Nav"
+        android:name="ro.rsbideveloper.rsbi.Splashscreen"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/splashcreen">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/Homepage_Nav"
+            app:popUpTo="@id/Splashscreen_Nav"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="ro.rsbideveloper.rsbi.SecondFragment"
+        android:id="@+id/Homepage_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Homepage"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        tools:layout="@layout/homepage">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_Homepage_Nav_to_eventspage2"
+            app:destination="@id/Eventspage_Nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/Eventspage_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Eventspage"
+        android:label="Eventspage"
+        tools:layout="@layout/eventspage" >
+        <action
+            android:id="@+id/action_eventspage_to_workpage2"
+            app:destination="@id/Workpage_Nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/Publicpage_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Publicpage"
+        android:label="Publicpage"
+        tools:layout="@layout/publicpage" >
+        <action
+            android:id="@+id/action_publicpage_to_Homepage_Nav2"
+            app:destination="@id/Homepage_Nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/Workpage_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Workpage"
+        android:label="Workpage"
+        tools:layout="@layout/workpage" >
+        <action
+            android:id="@+id/action_workpage_to_publicpage"
+            app:destination="@id/Publicpage_Nav" />
     </fragment>
 </navigation>

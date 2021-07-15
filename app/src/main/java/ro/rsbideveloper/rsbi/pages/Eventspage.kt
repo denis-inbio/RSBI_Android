@@ -1,20 +1,19 @@
-package ro.rsbideveloper.rsbi
+package ro.rsbideveloper.rsbi.pages
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import ro.rsbideveloper.rsbi.databinding.FragmentFirstBinding
+import kotlinx.android.synthetic.main.eventspage.*
+import kotlinx.android.synthetic.main.splashcreen.*
+import ro.rsbideveloper.rsbi.R
+import ro.rsbideveloper.rsbi.SplashscreenDirections
+import ro.rsbideveloper.rsbi.databinding.EventspageBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class FirstFragment : Fragment() {
-
-    private var _binding: FragmentFirstBinding? = null
-
+class Eventspage : Fragment(R.layout.eventspage) {
+    private var _binding: EventspageBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -23,17 +22,16 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = EventspageBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        Eventspage_btn.setOnClickListener {
+            findNavController().navigate(EventspageDirections
+                .actionEventspageToWorkpage2())
         }
     }
 
