@@ -19,3 +19,9 @@ Formalities:
 - every ("significant") feature has its own branch, then is pulled on the "dev(elopment)" master branch
 - what are "flows" in github ?
 - ...
+
+Automation / Scripts:
+- JDK installation (or at least detection and searching if it exists in PATH)
+- Android SDK installation
+- Android NDK installation (optional)
+- 
