@@ -1,11 +1,15 @@
 [
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\public_page.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\public_page.xml"
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\events_page_recycler_view_item.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\events_page_recycler_view_item.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\home_page.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\home_page.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_activity.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\main_activity.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\contact_page.xml",
@@ -24,8 +28,8 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\events_page.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_event.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\add_event.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\blog_page.xml",
@@ -54,5 +58,9 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\about_us_page.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\about_us_page.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\detailed_view_event.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\detailed_view_event.xml"
     }
 ]

@@ -1,5 +1,3 @@
-ro/rsbideveloper/rsbi/databinding/ActivityMainBinding.java
- ro.rsbideveloper.rsbi.databinding.ActivityMainBinding
 ro/rsbideveloper/rsbi/databinding/EssentialSkillsPageBinding.java
  ro.rsbideveloper.rsbi.databinding.EssentialSkillsPageBinding
 ro/rsbideveloper/rsbi/databinding/StudyPageBinding.java
@@ -10,6 +8,8 @@ ro/rsbideveloper/rsbi/databinding/EventsPageBinding.java
  ro.rsbideveloper.rsbi.databinding.EventsPageBinding
 ro/rsbideveloper/rsbi/databinding/ContactPageBinding.java
  ro.rsbideveloper.rsbi.databinding.ContactPageBinding
+ro/rsbideveloper/rsbi/databinding/MainActivityBinding.java
+ ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 ro/rsbideveloper/rsbi/databinding/BottomNavigationBarBinding.java
  ro.rsbideveloper.rsbi.databinding.BottomNavigationBarBinding
 ro/rsbideveloper/rsbi/databinding/WorkPageBinding.java
@@ -20,9 +20,23 @@ ro/rsbideveloper/rsbi/databinding/BioinformaticsInRomaniaPageBinding.java
  ro.rsbideveloper.rsbi.databinding.BioinformaticsInRomaniaPageBinding
 ro/rsbideveloper/rsbi/databinding/BlogPageBinding.java
  ro.rsbideveloper.rsbi.databinding.BlogPageBinding
+ro/rsbideveloper/rsbi/databinding/EventsPageRecyclerViewItemBinding.java
+ ro.rsbideveloper.rsbi.databinding.EventsPageRecyclerViewItemBinding
 ro/rsbideveloper/rsbi/databinding/HomePageBinding.java
  ro.rsbideveloper.rsbi.databinding.HomePageBinding
+ro/rsbideveloper/rsbi/MVVM/EventDatabase_Impl.java
+ ro.rsbideveloper.rsbi.MVVM.EventDatabase_Impl
+ ro.rsbideveloper.rsbi.MVVM.EventDatabase_Impl$1
+ro/rsbideveloper/rsbi/databinding/AddEventBinding.java
+ ro.rsbideveloper.rsbi.databinding.AddEventBinding
 ro/rsbideveloper/rsbi/BuildConfig.java
  ro.rsbideveloper.rsbi.BuildConfig
+ro/rsbideveloper/rsbi/MVVM/EventDao_Impl.java
+ ro.rsbideveloper.rsbi.MVVM.EventDao_Impl
+ ro.rsbideveloper.rsbi.MVVM.EventDao_Impl$1
+ ro.rsbideveloper.rsbi.MVVM.EventDao_Impl$2
+ ro.rsbideveloper.rsbi.MVVM.EventDao_Impl$3
+ro/rsbideveloper/rsbi/databinding/DetailedViewEventBinding.java
+ ro.rsbideveloper.rsbi.databinding.DetailedViewEventBinding
 ro/rsbideveloper/rsbi/databinding/PublicEngagementPageBinding.java
  ro.rsbideveloper.rsbi.databinding.PublicEngagementPageBinding

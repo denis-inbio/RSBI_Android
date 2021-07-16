@@ -67,14 +67,14 @@ data class Event (  // this could instead be the more general Entity of "Post" (
     // <TODO> contact mechanism to the developer's email / other
         //  endpoints (maybe have a ~ "developer's feedback endpoint" running on a server ?)
 
-    val comments: List<String>,
+//    val comments: List<String>,   // <TODO> cannot have List<> types, only "primitive / integral" types
     // <TODO> the option to also leave a comment -> what does Akismet do to "filter spam" ?
 
     val schedule: String,   // define a better type; there are some events which actually have a schedule,
                                 // and this contains the date-time, the speaker, the title, of the presentation
                                 // the presenter's provenience, ..?
 
-    val attachments_URL: List<String>,   // it is necessary the posts be able to have attachments (well,
+//    val attachments_URL: List<String>,   // it is necessary the posts be able to have attachments (well,
                 // they actually have URLs, not actual attachments; the data itself is updated in an
                 // authorized environment where the role for "uploading to database / server" is given,
                 // whereas accessing the data requires either an "anonymous / public role" (for

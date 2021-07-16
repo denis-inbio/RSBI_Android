@@ -8,5 +8,8 @@ public class Events_pageDirections private constructor() {
   public companion object {
     public fun actionEventspageToWorkpage2(): NavDirections =
         ActionOnlyNavDirections(R.id.action_eventspage_to_workpage2)
+
+    public fun actionEventsPageNavToAddEvent(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_Events_page_Nav_to_addEvent)
   }
 }

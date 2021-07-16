@@ -6,9 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
-import kotlinx.android.synthetic.main.activity_main.*
-import ro.rsbideveloper.rsbi.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.main_activity.*
+import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 
 // <TODO> there is a possibility for the server to refuse / blacklist the client's
     // IP address, so handle that case as well (it blocked mine as I was using Tor, because
@@ -55,24 +56,30 @@ import ro.rsbideveloper.rsbi.databinding.ActivityMainBinding
     // well, while crawling the website, I haven't found these presentations anywhere; I have seen just some photos for the Beer and Science events;
     // so bottom line: a mechanism for uploading, downloading, visualizing presentations (preferably converted to .pdf client-side or server-side; avoid relying on .ppt viewers or any other dependencies,
     // all browsers can very well render .pdf files)
-// <TODO> 
+// <TODO> use an ActionBar or not ? the main reason for using one would be to have an indication of the current fragment,
+    // but that could be done in many other ways I guess; and essentially, I'd only care about the ActionBar if it were a
+    // necessity for the NavigationDrawer
+// <TODO>
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: MainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        MainActivity_bottom_nav.setupWithNavController(findNavController(R.id.MainActivity_fragment_host))
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
+        val navController = navHostFragment.navController
 
+        binding.MainActivityBottomNav.setupWithNavController(navController)
+//        setupActionBarWithNavController(navController)
 //        setSupportActionBar(binding.toolbar)
 
-//        val navController = findNavController(R.id.nav_host_fragment_content_main)
+//        val navController2 = findNavController(R.id.nav_host_fragment_container)
 //        appBarConfiguration = AppBarConfiguration(navController.graph)
 //        setupActionBarWithNavController(navController, appBarConfiguration)
 

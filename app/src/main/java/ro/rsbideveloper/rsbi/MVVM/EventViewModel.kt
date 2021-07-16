@@ -15,7 +15,8 @@ import kotlinx.coroutines.launch
     // might be destructed and the data would still persist due to its reference in the ViewModel (even more so,
     // the ViewModel would hold callbacks to observers, which could get destructed or new ones added)
 class EventViewModel(application: Application) : AndroidViewModel(application) {
-    private val data: LiveData<List<Event>>
+    val data: LiveData<List<Event>> // (*?) this LiveData<> is the result of a Query; now, the internals of when
+        // the @Query behind it actually gets executed remains unknown, but it is responsible for maintaining "integrity"
     private val repository: EventRepository // (*?) I'd rather this have "repositorySQL" as its identifier
 
     init {  // (*?) supposedly this is executed first when the instance is created / "when EventViewModel gets `called`"

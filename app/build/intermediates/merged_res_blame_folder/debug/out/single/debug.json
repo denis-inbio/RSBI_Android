@@ -4,10 +4,6 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_bioinformatics_in_romania_page.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\bioinformatics_in_romania_page.xml"
     },
@@ -20,16 +16,16 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_study_page.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\study_page.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_article_24.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_article_24.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_navigation_bar.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\bottom_navigation_bar.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_study_page.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\study_page.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_work_page.xml.flat",
@@ -68,6 +64,10 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\essential_skills_page.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_activity.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
@@ -80,12 +80,24 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\public_engagement_page.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_event.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\add_event.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_page.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\home_page.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_events_page_recycler_view_item.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\events_page_recycler_view_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_detailed_view_event.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\detailed_view_event.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_navigation.xml.flat",
@@ -96,15 +108,19 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_rss_feed_24.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_24.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_work_24.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_work_24.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_about_us_page.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\about_us_page.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_work_24.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_work_24.xml"
     }
 ]

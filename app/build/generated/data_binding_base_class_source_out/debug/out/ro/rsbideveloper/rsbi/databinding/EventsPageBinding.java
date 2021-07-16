@@ -8,7 +8,9 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,13 +24,22 @@ public final class EventsPageBinding implements ViewBinding {
   public final Button EventsPageBtn;
 
   @NonNull
+  public final FloatingActionButton EventsPageFloatbtnAddEvent;
+
+  @NonNull
   public final ConstraintLayout EventsPageLayout;
 
+  @NonNull
+  public final RecyclerView EventsPageRecyclerView;
+
   private EventsPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button EventsPageBtn,
-      @NonNull ConstraintLayout EventsPageLayout) {
+      @NonNull FloatingActionButton EventsPageFloatbtnAddEvent,
+      @NonNull ConstraintLayout EventsPageLayout, @NonNull RecyclerView EventsPageRecyclerView) {
     this.rootView = rootView;
     this.EventsPageBtn = EventsPageBtn;
+    this.EventsPageFloatbtnAddEvent = EventsPageFloatbtnAddEvent;
     this.EventsPageLayout = EventsPageLayout;
+    this.EventsPageRecyclerView = EventsPageRecyclerView;
   }
 
   @Override
@@ -64,9 +75,22 @@ public final class EventsPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.Events_page_floatbtn_add_event;
+      FloatingActionButton EventsPageFloatbtnAddEvent = rootView.findViewById(id);
+      if (EventsPageFloatbtnAddEvent == null) {
+        break missingId;
+      }
+
       ConstraintLayout EventsPageLayout = (ConstraintLayout) rootView;
 
-      return new EventsPageBinding((ConstraintLayout) rootView, EventsPageBtn, EventsPageLayout);
+      id = R.id.Events_page_recycler_view;
+      RecyclerView EventsPageRecyclerView = rootView.findViewById(id);
+      if (EventsPageRecyclerView == null) {
+        break missingId;
+      }
+
+      return new EventsPageBinding((ConstraintLayout) rootView, EventsPageBtn,
+          EventsPageFloatbtnAddEvent, EventsPageLayout, EventsPageRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
