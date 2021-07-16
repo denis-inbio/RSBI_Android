@@ -13,44 +13,44 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/Homepage_Nav"
+            app:destination="@id/Home_page_Nav"
             app:popUpTo="@id/Splashscreen_Nav"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/Homepage_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Homepage"
+        android:id="@+id/Home_page_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Home_page"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/homepage">
+        tools:layout="@layout/home_page">
         <action
             android:id="@+id/action_Homepage_Nav_to_eventspage2"
-            app:destination="@id/Eventspage_Nav" />
+            app:destination="@id/Events_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Eventspage_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Eventspage"
+        android:id="@+id/Events_page_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Events_page"
         android:label="Eventspage"
-        tools:layout="@layout/eventspage" >
+        tools:layout="@layout/events_page" >
         <action
             android:id="@+id/action_eventspage_to_workpage2"
-            app:destination="@id/Workpage_Nav" />
+            app:destination="@id/Work_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Publicpage_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Publicpage"
+        android:id="@+id/Public_engagement_page_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Public_engagement_page"
         android:label="Publicpage"
-        tools:layout="@layout/publicpage" >
+        tools:layout="@layout/public_engagement_page">
         <action
             android:id="@+id/action_publicpage_to_Homepage_Nav2"
-            app:destination="@id/Homepage_Nav" />
+            app:destination="@id/Home_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Workpage_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Workpage"
+        android:id="@+id/Work_page_Nav"
+        android:name="ro.rsbideveloper.rsbi.pages.Work_page"
         android:label="Workpage"
-        tools:layout="@layout/workpage" >
+        tools:layout="@layout/work_page" >
         <action
             android:id="@+id/action_workpage_to_publicpage"
-            app:destination="@id/Publicpage_Nav" />
+            app:destination="@id/Public_engagement_page_Nav" />
     </fragment>
 </navigation>

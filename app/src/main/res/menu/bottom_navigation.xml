@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@id/Homepage_Nav"
+    <item android:id="@id/Home_page_Nav"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home"/>
 
-    <item android:id="@id/Eventspage_Nav"
+    <item android:id="@id/Events_page_Nav"
         android:icon="@drawable/ic_baseline_article_24"
         android:title="Events"/>
 
-    <item android:id="@id/Publicpage_Nav"
+    <item android:id="@id/Public_engagement_page_Nav"
         android:icon="@drawable/ic_baseline_rss_feed_24"
         android:title="(Public) News"/>
 
-    <item android:id="@id/Workpage_Nav"
+    <item android:id="@id/Work_page_Nav"
         android:icon="@drawable/ic_baseline_work_24"
         android:title="Work"/>
 
