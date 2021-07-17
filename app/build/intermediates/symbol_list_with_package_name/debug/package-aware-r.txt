@@ -1794,6 +1794,7 @@ id Bioinformatics_in_Romania_page_Nav
 id Blog_page_Nav
 id CTRL
 id Contact_page_Nav
+id DetailedViewEvent_Nav
 id DetailedViewEvent_layout
 id DetailedViewEvent_tv1
 id DetailedViewEvent_tv2
@@ -1831,6 +1832,7 @@ id SHOW_PROGRESS
 id SYM
 id Splashscreen_Nav
 id Splashscreen_btn
+id Splashscreen_btn_test_web_view
 id Splashscreen_layout
 id Study_page_Nav
 id TOP_END
@@ -1879,6 +1881,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id action_Events_page_Nav_to_WriteEvent_page_Nav
+id action_Events_page_Nav_to_detailedViewEvent
 id action_FirstFragment_to_SecondFragment
 id action_Homepage_Nav_to_eventspage2
 id action_Public_engagement_page_Nav_to_essential_skills_page
@@ -2274,6 +2277,8 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id web_view_rsbi_layout
+id web_view_rsbi_web_view
 id withText
 id withinBounds
 id wrap
@@ -2447,6 +2452,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout web_view_rsbi
 layout work_page
 layout write_event_dialog
 menu bottom_navigation
@@ -2456,6 +2462,7 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
+string RSBI_website_URL
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

@@ -1,8 +1,6 @@
 package ro.rsbideveloper.rsbi.MVVM.event
 
 import android.app.Application
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -20,7 +18,7 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
     val data: LiveData<List<Event>> // (*?) this LiveData<> is the result of a Query; now, the internals of when
         // the @Query behind it actually gets executed remains unknown, but it is responsible for maintaining "integrity"
     private val repository: EventRepository // (*?) I'd rather this have "repositorySQL" as its identifier
-    val dataSelectById: LiveData<Event?>
+//    val dataSelectById: LiveData<Event>
 
     init {  // (*?) supposedly this is executed first when the instance is created / "when EventViewModel gets `called`"
         // so I guess that if a val gets initialized here, the error will go away ..?; it's nice because that way
@@ -40,7 +38,12 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
             // don't think so, because the LiveData could get modified locally (such as changes in a scope or the view
             // the user sees, and that shouldn't necessarily propagate into the database ? or should it ? well, I guess
             // that scopes ought to contain "database-consequential" and "database-inconsequential" data)
-        dataSelectById = repository.selectById()
+
+        // <TODO> make this work; are reads meant to be kept as these variables which are asynchronously updated ?
+            // but what about the WriteEvent page ? how does it know when the asynchronous query execution terminates (!?),
+            // such that it could decide if to show an update screen or a create screen and an error, possibly (for when an Event
+            // is supposed to be found, but is actually missing)
+    //        dataSelectById = repository.selectById()
     }
 
     fun addEvent(event: Event) {
@@ -56,9 +59,9 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun selectById(selectId: Int) {
-        viewModelScope.launch(Dispatchers.IO) {
-            if(selectId >= 0)   // <TODO> is this correct ? is it guaranteed that ID's will always be >= 0 ?
-                dataSelectById = repository.selectById(selectId)
-        }
+//        viewModelScope.launch(Dispatchers.IO) {
+//            if(selectId >= 0)   // <TODO> is this correct ? is it guaranteed that ID's will always be >= 0 ?
+//                dataSelectById = repository.selectById(selectId)
+//        }
     }
 }

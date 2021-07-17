@@ -22,12 +22,16 @@ public final class SplashcreenBinding implements ViewBinding {
   public final Button SplashscreenBtn;
 
   @NonNull
+  public final Button SplashscreenBtnTestWebView;
+
+  @NonNull
   public final ConstraintLayout SplashscreenLayout;
 
   private SplashcreenBinding(@NonNull ConstraintLayout rootView, @NonNull Button SplashscreenBtn,
-      @NonNull ConstraintLayout SplashscreenLayout) {
+      @NonNull Button SplashscreenBtnTestWebView, @NonNull ConstraintLayout SplashscreenLayout) {
     this.rootView = rootView;
     this.SplashscreenBtn = SplashscreenBtn;
+    this.SplashscreenBtnTestWebView = SplashscreenBtnTestWebView;
     this.SplashscreenLayout = SplashscreenLayout;
   }
 
@@ -64,10 +68,16 @@ public final class SplashcreenBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.Splashscreen_btn_test_web_view;
+      Button SplashscreenBtnTestWebView = rootView.findViewById(id);
+      if (SplashscreenBtnTestWebView == null) {
+        break missingId;
+      }
+
       ConstraintLayout SplashscreenLayout = (ConstraintLayout) rootView;
 
       return new SplashcreenBinding((ConstraintLayout) rootView, SplashscreenBtn,
-          SplashscreenLayout);
+          SplashscreenBtnTestWebView, SplashscreenLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

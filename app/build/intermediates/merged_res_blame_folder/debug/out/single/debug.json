@@ -32,12 +32,12 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\work_page.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_write_event_dialog.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\write_event_dialog.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_events_page.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\events_page.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_write_event_dialog.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\write_event_dialog.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_splashcreen.xml.flat",
@@ -110,6 +110,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_navigation.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\menu\\bottom_navigation.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_web_view_rsbi.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\web_view_rsbi.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_rss_feed_24.xml.flat",

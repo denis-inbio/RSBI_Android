@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_Events_page_Nav_to_WriteEvent_page_Nav"
             app:destination="@id/WriteEvent_page_Nav" />
+        <action
+            android:id="@+id/action_Events_page_Nav_to_detailedViewEvent"
+            app:destination="@id/DetailedViewEvent_Nav" />
     </fragment>
     <fragment
         android:id="@+id/Public_engagement_page_Nav"
@@ -125,4 +128,9 @@
             android:id="@+id/action_study_page_to_Home_page_Nav"
             app:destination="@id/Home_page_Nav" />
     </fragment>
+    <fragment
+        android:id="@+id/DetailedViewEvent_Nav"
+        android:name="ro.rsbideveloper.rsbi.dialogs.DetailedViewEvent"
+        android:label="detailed_view_event"
+        tools:layout="@layout/detailed_view_event" />
 </navigation>

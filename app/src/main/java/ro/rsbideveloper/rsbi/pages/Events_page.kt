@@ -36,27 +36,27 @@ class Events_page : Fragment(R.layout.events_page) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = EventsPageBinding.inflate(inflater, container, false)
 
-        _binding?.EventsPageFloatbtnAddEvent?.setOnClickListener {
+        binding?.EventsPageFloatbtnAddEvent?.setOnClickListener {
             findNavController().navigate(Events_pageDirections
                 .actionEventsPageNavToWriteEventPageNav(-1))
         }
 
-        _binding?.EventsPageBtn?.setOnClickListener {
+        binding?.EventsPageBtn?.setOnClickListener {
             findNavController().navigate(Events_pageDirections
                 .actionEventspageToWorkpage2())
         }
 
-        _binding?.EventsPageRecyclerView?.adapter = EventsRecyclerViewAdapter()
-        _binding?.EventsPageRecyclerView?.layoutManager = LinearLayoutManager(requireContext())
+        binding?.EventsPageRecyclerView?.adapter = EventsRecyclerViewAdapter()
+        binding?.EventsPageRecyclerView?.layoutManager = LinearLayoutManager(requireContext())
 
         viewModel = ViewModelProvider(this).get(EventViewModel::class.java)
         viewModel.data.observe(viewLifecycleOwner, Observer {
             // (*?) apparently this "observe" callback needs to also initiate the list; in fact, it needs
                 // to cover all possible cases of "synchronicity", to ensure "integrity" [not just "data change triggers"]
-            (_binding?.EventsPageRecyclerView?.adapter as EventsRecyclerViewAdapter).setData(it)
+            (binding?.EventsPageRecyclerView?.adapter as EventsRecyclerViewAdapter).setData(it)
         })
 
         // (!!) let's try generating data asynchronously, to test the effectiveness of the ViewModel
@@ -106,13 +106,8 @@ class Events_page : Fragment(R.layout.events_page) {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

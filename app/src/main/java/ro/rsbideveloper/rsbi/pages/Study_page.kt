@@ -11,29 +11,19 @@ import ro.rsbideveloper.rsbi.databinding.StudyPageBinding
 // <TODO> this seems like something that will need to be kept up-to-date, so a server request will be needed;
     // also, new entries should be addable by users, which are posted for review to admins, who will
     // validate the data
+
 // <TODO>
 
 class Study_page : Fragment(R.layout.study_page) {
     private var _binding: StudyPageBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
         _binding = StudyPageBinding.inflate(inflater, container, false)
         return binding.root
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-
     }
 
     override fun onDestroyView() {

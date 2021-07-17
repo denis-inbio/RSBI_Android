@@ -1,7 +1,6 @@
 package ro.rsbideveloper.rsbi
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import android.view.Menu
@@ -10,7 +9,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.main_activity.*
 import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 
 // <TODO> there is a possibility for the server to refuse / blacklist the client's
@@ -64,15 +62,15 @@ import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 // <TODO>
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var appBarConfiguration: AppBarConfiguration
+    // <TODO> what is this for ?
+//    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: MainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
         val navController = navHostFragment.navController
@@ -109,14 +107,12 @@ class MainActivity : AppCompatActivity() {
         val navController2 = navHostFragment.navController
         findViewById<NavigationView>(R.id.MainActivity_navigation_view)
             .setupWithNavController(navController2)
-
-
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        return super.onCreateOptionsMenu(menu)
+//    }
 //    override fun onContextItemSelected(item: MenuItem): Boolean {
 //        return item.onNavDestinationSelected(
 //            findNavController(R.id.MainActivity_fragment_host)
@@ -124,14 +120,14 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return item.onNavDestinationSelected(
-                findNavController(R.id.MainActivity_fragment_host)
-            ) || super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        return item.onNavDestinationSelected(
+//                findNavController(R.id.MainActivity_fragment_host)
+//            ) || super.onOptionsItemSelected(item)
+//    }
 
 
 //    override fun onSupportNavigateUp(): Boolean {

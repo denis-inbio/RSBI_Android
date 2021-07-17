@@ -3,7 +3,6 @@ package ro.rsbideveloper.rsbi.MVVM.event
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import kotlinx.android.parcel.Parcelize
 
 // <TODO> there are multiple kinds of instantiation of a "Post":
     // (webinar / conference) event
@@ -25,7 +24,8 @@ import kotlinx.android.parcel.Parcelize
 // <TODO> the navigation drawer will link to specialized pages for each "category", but events of any
     // kind will also be accessible through the Home_page's search mechanism
 
-//@Parcelize
+//@Parcelize    -> it has also been deprecated together with synthetics; is this also the reason why
+    // the update to the repository didn't work ? I wasn't getting the correct data through the safeargs (!)
 @Entity(tableName = "event_table")
 data class Event (  // this could instead be the more general Entity of "Post" (which is any
             // of the kind of Events, including the one which ahs a schedule; or it could be a Job

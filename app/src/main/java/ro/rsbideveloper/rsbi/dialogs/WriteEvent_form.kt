@@ -29,62 +29,58 @@ import ro.rsbideveloper.rsbi.recycler_adapters.EventsRecyclerViewAdapter
 // the parameter is null then it will create a new one, and when it's not null it will load its data
 // into the Ui and allow for its modification
 
-// <TODO>
+// <TODO> imagine that this app has multiple views open and operated simultaneously; now imagine that these
+    // views modify data in the LiveData<List<Event>>; I want that this page be aware of when something changes
+    // in the database; it will dynamically modify what the user is inputing into the form, or it will
+    // just be aware of what the differences are (preferably not interrupt the user, but warn them about the
+    // appearance of a modification (!), and offer to show the diff (without losing the current modifications)
 
 class WriteEvent_form : Fragment(R.layout.write_event_dialog) {
     private var _binding: WriteEventDialogBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+    private val args by navArgs<WriteEvent_formArgs>()
+
     private lateinit var viewModel: EventViewModel
+    // <TODO> ?? design + LiveData for the query
     private var event: Event? = null
 
-    private val args by navArgs<WriteEvent_formArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = WriteEventDialogBinding.inflate(inflater, container, false)
-        _binding?.WriteEventBtn?.setOnClickListener {
+
+        // <TODO> this needs to be redesigned, I hate it; especially writing a function just for a one-liner (by
+            // this I mean the updateData() and the insertData()
+        binding?.WriteEventBtn?.setOnClickListener {
             validateAndInsertData()
         }
-
         viewModel = ViewModelProvider(this).get(EventViewModel::class.java)
 
-        Toast.makeText(context, "Received id: ${args.eventId}", Toast.LENGTH_SHORT).show()
-        val eventId = args.eventId as Int
 
-        viewModel.dataSelectById?.observe(viewLifecycleOwner, Observer {
-            event = it
-        }
-
-
-            (_binding?.EventsPageRecyclerView?.adapter as EventsRecyclerViewAdapter).setData(it)
-        })
-        fun setData(events: List<Event>) {
-            this.dataList = events
-
-
-        Toast.makeText(context, "Received Event: $event", Toast.LENGTH_SHORT).show()
-
-        if(event != null) {
-            // <TODO> Update / Edit mode
-            _binding?.WriteEventEt1?.setText(event?.id.toString())
-            _binding?.WriteEventEt2?.setText(event?.published_by)
-            _binding?.WriteEventEt3?.setText(event?.image_URL)
-            _binding?.WriteEventBtn?.setText("Update")
-
-        } else {
-            // <TODO> Create Mode
-            _binding?.WriteEventBtn?.setText("Create")
-        }
+        // <TODO> the selectById query
+//        Toast.makeText(context, "Received id: ${args.eventId}", Toast.LENGTH_SHORT).show()
+//        val eventId = args.eventId as Int
+//        viewModel.dataSelectById?.observe(viewLifecycleOwner, Observer {
+//            event = it
+//        })
+//        Toast.makeText(context, "Received Event: $event", Toast.LENGTH_SHORT).show()
+//
+//
+//        if(event != null) {
+//            // <TODO> Update / Edit mode
+//            _binding?.WriteEventEt1?.setText(event?.id.toString())
+//            _binding?.WriteEventEt2?.setText(event?.published_by)
+//            _binding?.WriteEventEt3?.setText(event?.image_URL)
+//            _binding?.WriteEventBtn?.setText("Update")
+//
+//        } else {
+//            // <TODO> Create Mode
+//            _binding?.WriteEventBtn?.setText("Create")
+//        }
 
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onDestroyView() {
@@ -93,6 +89,7 @@ class WriteEvent_form : Fragment(R.layout.write_event_dialog) {
     }
 
 
+    // <TODO> redesign this to look better; also ensure checks for the two modes of operation
     private fun validateAndInsertData() {
         val data = validateData()
         data?.let {
@@ -103,6 +100,7 @@ class WriteEvent_form : Fragment(R.layout.write_event_dialog) {
                 insertData(it)
                 Log.d("DebugData", "Wrote data to database")
             }
+
             // <TODO> how to set an observer ? who sets it, the scope that wants / requests access to the
             //  "information (callback-updating) stream" or the "owner of the information" ?
 //            viewModel.obser

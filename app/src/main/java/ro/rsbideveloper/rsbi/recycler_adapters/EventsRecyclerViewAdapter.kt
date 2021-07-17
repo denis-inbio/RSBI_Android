@@ -6,14 +6,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.events_page.view.*
-import kotlinx.android.synthetic.main.events_page_recycler_view_item.view.*
 import ro.rsbideveloper.rsbi.MVVM.event.Event
 import ro.rsbideveloper.rsbi.R
 import ro.rsbideveloper.rsbi.pages.Events_pageDirections
 
 class EventsRecyclerViewAdapter: RecyclerView.Adapter<EventsRecyclerViewAdapter.ViewHolder>() {
-
     private var dataList = emptyList<Event>()
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -39,24 +36,26 @@ class EventsRecyclerViewAdapter: RecyclerView.Adapter<EventsRecyclerViewAdapter.
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = dataList[position]
 
-        holder.itemView.Events_page_recycler_view_item_tv1.text = data.id.toString()
-        holder.itemView.Events_page_recycler_view_item_tv2.text = data.published_by
-        holder.itemView.Events_page_recycler_view_item_tv3.text = data.image_URL
-
-        holder.itemView.Events_page_recycler_view_item_layout.setOnClickListener {
-            val item = dataList[position]
-            Toast.makeText(holder.itemView.context,
-                "The position is $position; it would point to $item",
-                Toast.LENGTH_SHORT).show()
-
-            holder.itemView.findNavController().navigate(Events_pageDirections
-                .actionEventsPageNavToWriteEventPageNav(position)
-            )
-        }
+        // <TODO> now how to create the _binding here ?
+//        holder.itemView.Events_page_recycler_view_item_tv1.text = data.id.toString()
+//        holder.itemView.Events_page_recycler_view_item_tv2.text = data.published_by
+//        holder.itemView.Events_page_recycler_view_item_tv3.text = data.image_URL
+//
+//        holder.itemView.Events_page_recycler_view_item_layout.setOnClickListener {
+//            val item = dataList[position]
+//            Toast.makeText(holder.itemView.context,
+//                "The position is $position; it would point to $item",
+//                Toast.LENGTH_SHORT).show()
+//
+//            holder.itemView.findNavController().navigate(Events_pageDirections
+//                .actionEventsPageNavToWriteEventPageNav(position)
+//            )
+//        }
     }
 
     fun setData(events: List<Event>) {
         this.dataList = events
+        // <TODO> what does this do ?
         notifyDataSetChanged()  // (*?) but who does this notify ? is it the recycler view that
                                     // is linked to this adapter ? because in regards to the LiveData<>
                                     // that caused this function to be called in the first place, there is

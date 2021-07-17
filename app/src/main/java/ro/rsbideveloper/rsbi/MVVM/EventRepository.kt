@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 class EventRepository(private val dao: EventDao) {
     val data: LiveData<List<Event>> = dao.selectAll()   // why is this not meant to be private ? (who needs access and is not an inheritor ?)
-    val dataSelectById: LiveData<Event> = dao.selectById()
+//    val dataSelectById: LiveData<Event> = dao.selectById()
 
     // (*?) from here on, the names that the repository presents could be "domain specific" or
         // still "generic" (as the context / name resolution could still be sufficient)
@@ -22,6 +22,7 @@ class EventRepository(private val dao: EventDao) {
         dao.update(event)
     }
 
+    // <TODO> why is this supposed not to be suspend ? why is "suspend" redundant here ?
     suspend fun selectById(eventId: Int) {
         dao.selectById(eventId)
     }
