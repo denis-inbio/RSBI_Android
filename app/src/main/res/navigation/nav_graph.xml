@@ -35,8 +35,8 @@
             android:id="@+id/action_eventspage_to_workpage2"
             app:destination="@id/Work_page_Nav" />
         <action
-            android:id="@+id/action_Events_page_Nav_to_addEvent"
-            app:destination="@id/AddEvent" />
+            android:id="@+id/action_Events_page_Nav_to_WriteEvent_page_Nav"
+            app:destination="@id/WriteEvent_page_Nav" />
     </fragment>
     <fragment
         android:id="@+id/Public_engagement_page_Nav"
@@ -48,7 +48,7 @@
             app:destination="@id/Home_page_Nav" />
         <action
             android:id="@+id/action_Public_engagement_page_Nav_to_essential_skills_page"
-            app:destination="@id/Essential_skills_page" />
+            app:destination="@id/Essential_skills_page_Nav" />
     </fragment>
     <fragment
         android:id="@+id/Work_page_Nav"
@@ -60,63 +60,64 @@
             app:destination="@id/Public_engagement_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/AddEvent"
-        android:name="ro.rsbideveloper.rsbi.dialogs.AddEvent"
-        android:label="AddEvent"
-        tools:layout="@layout/add_event" >
+        android:id="@+id/WriteEvent_page_Nav"
+        android:name="ro.rsbideveloper.rsbi.dialogs.WriteEvent_form"
+        android:label="WriteEvent_page"
+        tools:layout="@layout/write_event_dialog">
         <action
-            android:id="@+id/action_addEvent_to_Events_page_Nav"
-            app:destination="@id/Events_page_Nav"
-            app:popUpTo="@id/Events_page_Nav"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_WriteEvent_page_Nav_to_Events_page_Nav"
+            app:destination="@id/Events_page_Nav" />
+        <argument
+            android:name="eventId"
+            app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/About_us_page"
+        android:id="@+id/About_us_page_Nav"
         android:name="ro.rsbideveloper.rsbi.pages.About_us_page"
         android:label="About_us_page"
         tools:layout="@layout/about_us_page">
         <action
             android:id="@+id/action_about_us_page_to_blog_page"
-            app:destination="@id/Blog_page" />
+            app:destination="@id/Blog_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Bioinformatics_in_Romania_page"
+        android:id="@+id/Bioinformatics_in_Romania_page_Nav"
         android:name="ro.rsbideveloper.rsbi.pages.Bioinformatics_in_Romania_page"
         android:label="Bioinformatics_in_Romania_page"
         tools:layout="@layout/bioinformatics_in_romania_page">
         <action
             android:id="@+id/action_bioinformatics_in_Romania_page_to_about_us_page"
-            app:destination="@id/About_us_page" />
+            app:destination="@id/About_us_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Blog_page"
+        android:id="@+id/Blog_page_Nav"
         android:name="ro.rsbideveloper.rsbi.pages.Blog_page"
         android:label="Blog_page"
         tools:layout="@layout/blog_page">
         <action
             android:id="@+id/action_blog_page_to_contact_page"
-            app:destination="@id/Contact_page" />
+            app:destination="@id/Contact_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Contact_page"
+        android:id="@+id/Contact_page_Nav"
         android:name="ro.rsbideveloper.rsbi.pages.Contact_page"
         android:label="Contact_page"
         tools:layout="@layout/contact_page">
         <action
             android:id="@+id/action_contact_page_to_study_page"
-            app:destination="@id/Study_page" />
+            app:destination="@id/Study_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Essential_skills_page"
+        android:id="@+id/Essential_skills_page_Nav"
         android:name="ro.rsbideveloper.rsbi.pages.Essential_skills_page"
         android:label="Essential_skills_page"
         tools:layout="@layout/essential_skills_page">
         <action
             android:id="@+id/action_essential_skills_page_to_bioinformatics_in_Romania_page"
-            app:destination="@id/Bioinformatics_in_Romania_page" />
+            app:destination="@id/Bioinformatics_in_Romania_page_Nav" />
     </fragment>
     <fragment
-        android:id="@+id/Study_page"
+        android:id="@+id/Study_page_Nav"
         android:name="ro.rsbideveloper.rsbi.pages.Study_page"
         android:label="Study_page"
         tools:layout="@layout/study_page">

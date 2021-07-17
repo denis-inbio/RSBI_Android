@@ -1,7 +1,6 @@
 package ro.rsbideveloper.rsbi.pages
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.events_page.*
-import kotlinx.android.synthetic.main.splashcreen.*
-import kotlinx.coroutines.*
-import ro.rsbideveloper.rsbi.MVVM.Event
-import ro.rsbideveloper.rsbi.MVVM.EventViewModel
+import ro.rsbideveloper.rsbi.MVVM.event.EventViewModel
 import ro.rsbideveloper.rsbi.R
 import ro.rsbideveloper.rsbi.databinding.EventsPageBinding
 import ro.rsbideveloper.rsbi.recycler_adapters.EventsRecyclerViewAdapter
@@ -46,7 +41,7 @@ class Events_page : Fragment(R.layout.events_page) {
 
         _binding?.EventsPageFloatbtnAddEvent?.setOnClickListener {
             findNavController().navigate(Events_pageDirections
-                .actionEventsPageNavToAddEvent())
+                .actionEventsPageNavToWriteEventPageNav(-1))
         }
 
         _binding?.EventsPageBtn?.setOnClickListener {

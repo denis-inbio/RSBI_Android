@@ -2,52 +2,52 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/AddEvent_layout"
+    android:id="@+id/WriteEvent_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dialogs.AddEvent">
+    tools:context=".dialogs.WriteEvent_form">
 
     <EditText
-        android:id="@+id/AddEvent_et1"
+        android:id="@+id/WriteEvent_et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/AddEvent_et2"
+        android:hint="Param1"
+        app:layout_constraintBottom_toTopOf="@+id/WriteEvent_et2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/AddEvent_et2"
+        android:id="@+id/WriteEvent_et2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/AddEvent_et3"
+        android:hint="Param2"
+        app:layout_constraintBottom_toTopOf="@+id/WriteEvent_et3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddEvent_et1" />
+        app:layout_constraintTop_toBottomOf="@+id/WriteEvent_et1" />
 
     <EditText
-        android:id="@+id/AddEvent_et3"
+        android:id="@+id/WriteEvent_et3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Param3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddEvent_et2" />
+        app:layout_constraintTop_toBottomOf="@+id/WriteEvent_et2" />
 
     <Button
-        android:id="@+id/AddEvent_btn"
+        android:id="@+id/WriteEvent_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
@@ -55,5 +55,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddEvent_et3" />
+        app:layout_constraintTop_toBottomOf="@+id/WriteEvent_et3" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="246dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

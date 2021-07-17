@@ -1,4 +1,4 @@
-package ro.rsbideveloper.rsbi.MVVM
+package ro.rsbideveloper.rsbi.MVVM.event
 
 import android.content.Context
 import androidx.room.Database

@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.main_activity.*
 import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 
@@ -75,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
         val navController = navHostFragment.navController
 
-        binding.MainActivityBottomNav.setupWithNavController(navController)
+//        binding.MainActivityBottomNav.setupWithNavController(navController)
 //        setupActionBarWithNavController(navController)
 //        setSupportActionBar(binding.toolbar)
 
@@ -87,6 +89,28 @@ class MainActivity : AppCompatActivity() {
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                .setAction("Action", null).show()
 //        }
+
+        /// COLLAPSING TOOLBAR
+//        val layout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar_layout)
+//        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+//        val navHostFragment =
+//            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+//        val navController = navHostFragment.navController
+//        val appBarConfiguration = AppBarConfiguration(navController.graph)
+//        layout.setupWithNavController(toolbar, navController, appBarConfiguration)
+
+        /// DRAWER LAYOUT AND NAVIGATION DRAWER
+        val drawerLayout = findViewById<DrawerLayout>(R.id.MainActivity_layout)
+        binding.MainActivityLayout
+        val appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+
+        val navHostFragment2 =
+            supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
+        val navController2 = navHostFragment.navController
+        findViewById<NavigationView>(R.id.MainActivity_navigation_view)
+            .setupWithNavController(navController2)
+
+
     }
 
 

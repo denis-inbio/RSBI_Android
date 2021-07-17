@@ -16,6 +16,10 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\contact_page.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\write_event_dialog.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\write_event_dialog.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\work_page.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\work_page.xml"
     },
@@ -26,10 +30,6 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\events_page.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\events_page.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_event.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\add_event.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\blog_page.xml",

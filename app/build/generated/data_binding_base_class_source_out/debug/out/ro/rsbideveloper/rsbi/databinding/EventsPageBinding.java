@@ -4,7 +4,9 @@ package ro.rsbideveloper.rsbi.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -32,14 +34,24 @@ public final class EventsPageBinding implements ViewBinding {
   @NonNull
   public final RecyclerView EventsPageRecyclerView;
 
+  @NonNull
+  public final Spinner EventsPageSearchCategory;
+
+  @NonNull
+  public final AutoCompleteTextView EventsPageSearchPattern;
+
   private EventsPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button EventsPageBtn,
       @NonNull FloatingActionButton EventsPageFloatbtnAddEvent,
-      @NonNull ConstraintLayout EventsPageLayout, @NonNull RecyclerView EventsPageRecyclerView) {
+      @NonNull ConstraintLayout EventsPageLayout, @NonNull RecyclerView EventsPageRecyclerView,
+      @NonNull Spinner EventsPageSearchCategory,
+      @NonNull AutoCompleteTextView EventsPageSearchPattern) {
     this.rootView = rootView;
     this.EventsPageBtn = EventsPageBtn;
     this.EventsPageFloatbtnAddEvent = EventsPageFloatbtnAddEvent;
     this.EventsPageLayout = EventsPageLayout;
     this.EventsPageRecyclerView = EventsPageRecyclerView;
+    this.EventsPageSearchCategory = EventsPageSearchCategory;
+    this.EventsPageSearchPattern = EventsPageSearchPattern;
   }
 
   @Override
@@ -89,8 +101,21 @@ public final class EventsPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.Events_page_search_category;
+      Spinner EventsPageSearchCategory = rootView.findViewById(id);
+      if (EventsPageSearchCategory == null) {
+        break missingId;
+      }
+
+      id = R.id.Events_page_search_pattern;
+      AutoCompleteTextView EventsPageSearchPattern = rootView.findViewById(id);
+      if (EventsPageSearchPattern == null) {
+        break missingId;
+      }
+
       return new EventsPageBinding((ConstraintLayout) rootView, EventsPageBtn,
-          EventsPageFloatbtnAddEvent, EventsPageLayout, EventsPageRecyclerView);
+          EventsPageFloatbtnAddEvent, EventsPageLayout, EventsPageRecyclerView,
+          EventsPageSearchCategory, EventsPageSearchPattern);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

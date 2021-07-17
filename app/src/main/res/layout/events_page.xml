@@ -37,5 +37,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Events_page_search_pattern" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Events_page_search_pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:text="AutoCompleteTextView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/Events_page_search_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Events_page_search_pattern"
+        app:layout_constraintStart_toEndOf="@+id/Events_page_search_pattern"
+        app:layout_constraintTop_toTopOf="@+id/Events_page_search_pattern" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

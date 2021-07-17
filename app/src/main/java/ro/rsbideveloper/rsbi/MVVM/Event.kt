@@ -1,7 +1,9 @@
-package ro.rsbideveloper.rsbi.MVVM
+package ro.rsbideveloper.rsbi.MVVM.event
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
 // <TODO> there are multiple kinds of instantiation of a "Post":
     // (webinar / conference) event
@@ -15,9 +17,15 @@ import androidx.room.PrimaryKey
     //
 
 // <TODO> the search mechanism will require "(`smart`) partial matching" (with adjustable "tolerance"
-    //  until something is found, at least a result, unless the database is empty), "filtering by tags",
-    //
+    // until something is found, at least a result, unless the database is empty), "filtering by tags",
+    // ...
 
+// <TODO> the search page will require something like Olx for the search filtering
+
+// <TODO> the navigation drawer will link to specialized pages for each "category", but events of any
+    // kind will also be accessible through the Home_page's search mechanism
+
+//@Parcelize
 @Entity(tableName = "event_table")
 data class Event (  // this could instead be the more general Entity of "Post" (which is any
             // of the kind of Events, including the one which ahs a schedule; or it could be a Job
@@ -82,4 +90,4 @@ data class Event (  // this could instead be the more general Entity of "Post" (
     val further_state: String   // or simply "state", <e.g.> "Active", "Closed / Finished", "Postponed" (such
                     // as the beer thing from 2020), "Canceled"
 
-)
+) // : Parcelable

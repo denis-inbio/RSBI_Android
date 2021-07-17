@@ -1,19 +1,49 @@
+ro/rsbideveloper/rsbi/pages/Home_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Home_pageDirections
+ro/rsbideveloper/rsbi/pages/Contact_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Contact_pageDirections
+ro/rsbideveloper/rsbi/pages/Essential_skills_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Essential_skills_pageDirections
 ro/rsbideveloper/rsbi/databinding/EssentialSkillsPageBinding.java
  ro.rsbideveloper.rsbi.databinding.EssentialSkillsPageBinding
-ro/rsbideveloper/rsbi/databinding/StudyPageBinding.java
- ro.rsbideveloper.rsbi.databinding.StudyPageBinding
+ro/rsbideveloper/rsbi/pages/Work_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Work_pageDirections
+ro/rsbideveloper/rsbi/pages/Public_engagement_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Public_engagement_pageDirections
 ro/rsbideveloper/rsbi/databinding/AboutUsPageBinding.java
  ro.rsbideveloper.rsbi.databinding.AboutUsPageBinding
 ro/rsbideveloper/rsbi/databinding/EventsPageBinding.java
  ro.rsbideveloper.rsbi.databinding.EventsPageBinding
 ro/rsbideveloper/rsbi/databinding/ContactPageBinding.java
  ro.rsbideveloper.rsbi.databinding.ContactPageBinding
-ro/rsbideveloper/rsbi/databinding/MainActivityBinding.java
- ro.rsbideveloper.rsbi.databinding.MainActivityBinding
-ro/rsbideveloper/rsbi/databinding/BottomNavigationBarBinding.java
- ro.rsbideveloper.rsbi.databinding.BottomNavigationBarBinding
+ro/rsbideveloper/rsbi/SplashscreenDirections.java
+ ro.rsbideveloper.rsbi.SplashscreenDirections
 ro/rsbideveloper/rsbi/databinding/WorkPageBinding.java
  ro.rsbideveloper.rsbi.databinding.WorkPageBinding
+ro/rsbideveloper/rsbi/pages/Study_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Study_pageDirections
+ro/rsbideveloper/rsbi/databinding/HomePageBinding.java
+ ro.rsbideveloper.rsbi.databinding.HomePageBinding
+ro/rsbideveloper/rsbi/pages/Bioinformatics_in_Romania_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Bioinformatics_in_Romania_pageDirections
+ro/rsbideveloper/rsbi/databinding/PublicEngagementPageBinding.java
+ ro.rsbideveloper.rsbi.databinding.PublicEngagementPageBinding
+ro/rsbideveloper/rsbi/pages/Blog_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Blog_pageDirections
+ro/rsbideveloper/rsbi/pages/About_us_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.About_us_pageDirections
+ro/rsbideveloper/rsbi/BuildConfig.java
+ ro.rsbideveloper.rsbi.BuildConfig
+ro/rsbideveloper/rsbi/databinding/StudyPageBinding.java
+ ro.rsbideveloper.rsbi.databinding.StudyPageBinding
+ro/rsbideveloper/rsbi/databinding/DetailedViewEventBinding.java
+ ro.rsbideveloper.rsbi.databinding.DetailedViewEventBinding
+ro/rsbideveloper/rsbi/databinding/MainActivityBinding.java
+ ro.rsbideveloper.rsbi.databinding.MainActivityBinding
+ro/rsbideveloper/rsbi/databinding/WriteEventDialogBinding.java
+ ro.rsbideveloper.rsbi.databinding.WriteEventDialogBinding
+ro/rsbideveloper/rsbi/databinding/BottomNavigationBarBinding.java
+ ro.rsbideveloper.rsbi.databinding.BottomNavigationBarBinding
 ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.java
  ro.rsbideveloper.rsbi.databinding.SplashcreenBinding
 ro/rsbideveloper/rsbi/databinding/BioinformaticsInRomaniaPageBinding.java
@@ -22,21 +52,23 @@ ro/rsbideveloper/rsbi/databinding/BlogPageBinding.java
  ro.rsbideveloper.rsbi.databinding.BlogPageBinding
 ro/rsbideveloper/rsbi/databinding/EventsPageRecyclerViewItemBinding.java
  ro.rsbideveloper.rsbi.databinding.EventsPageRecyclerViewItemBinding
-ro/rsbideveloper/rsbi/databinding/HomePageBinding.java
- ro.rsbideveloper.rsbi.databinding.HomePageBinding
-ro/rsbideveloper/rsbi/MVVM/EventDatabase_Impl.java
- ro.rsbideveloper.rsbi.MVVM.EventDatabase_Impl
- ro.rsbideveloper.rsbi.MVVM.EventDatabase_Impl$1
-ro/rsbideveloper/rsbi/databinding/AddEventBinding.java
- ro.rsbideveloper.rsbi.databinding.AddEventBinding
-ro/rsbideveloper/rsbi/BuildConfig.java
- ro.rsbideveloper.rsbi.BuildConfig
-ro/rsbideveloper/rsbi/MVVM/EventDao_Impl.java
- ro.rsbideveloper.rsbi.MVVM.EventDao_Impl
- ro.rsbideveloper.rsbi.MVVM.EventDao_Impl$1
- ro.rsbideveloper.rsbi.MVVM.EventDao_Impl$2
- ro.rsbideveloper.rsbi.MVVM.EventDao_Impl$3
-ro/rsbideveloper/rsbi/databinding/DetailedViewEventBinding.java
- ro.rsbideveloper.rsbi.databinding.DetailedViewEventBinding
-ro/rsbideveloper/rsbi/databinding/PublicEngagementPageBinding.java
- ro.rsbideveloper.rsbi.databinding.PublicEngagementPageBinding
+ro/rsbideveloper/rsbi/pages/Events_pageDirections.java
+ ro.rsbideveloper.rsbi.pages.Events_pageDirections
+ ro.rsbideveloper.rsbi.pages.Events_pageDirections$1
+ ro.rsbideveloper.rsbi.pages.Events_pageDirections$ActionEventsPageNavToWriteEventPageNav
+ro/rsbideveloper/rsbi/MVVM/event/EventDatabase_Impl.java
+ ro.rsbideveloper.rsbi.MVVM.event.EventDatabase_Impl
+ ro.rsbideveloper.rsbi.MVVM.event.EventDatabase_Impl$1
+ro/rsbideveloper/rsbi/dialogs/WriteEvent_formArgs.java
+ ro.rsbideveloper.rsbi.dialogs.WriteEvent_formArgs
+ ro.rsbideveloper.rsbi.dialogs.WriteEvent_formArgs$1
+ ro.rsbideveloper.rsbi.dialogs.WriteEvent_formArgs$Builder
+ro/rsbideveloper/rsbi/MVVM/event/EventDao_Impl.java
+ ro.rsbideveloper.rsbi.MVVM.event.EventDao_Impl
+ ro.rsbideveloper.rsbi.MVVM.event.EventDao_Impl$1
+ ro.rsbideveloper.rsbi.MVVM.event.EventDao_Impl$2
+ ro.rsbideveloper.rsbi.MVVM.event.EventDao_Impl$3
+ ro.rsbideveloper.rsbi.MVVM.event.EventDao_Impl$4
+ ro.rsbideveloper.rsbi.MVVM.event.EventDao_Impl$5
+ro/rsbideveloper/rsbi/dialogs/WriteEvent_formDirections.java
+ ro.rsbideveloper.rsbi.dialogs.WriteEvent_formDirections
