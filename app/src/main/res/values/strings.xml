@@ -11,5 +11,90 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
-    <string name="RSBI_website_URL">https://www.rsbi.ro</string>
+    <string name="RSBI_home">https://www.rsbi.ro</string>
+    <string name="RSBI_about_us">https://www.rsbi.ro/ro/about-us/</string>
+    <string name="RSBI_committee">https://www.rsbi.ro/ro/about-us/steering-committee/</string>
+    <string name="RSBI_member_list">https://www.rsbi.ro/ro/about-us/member-list/</string>
+    <string name="RSBI_contact">https://www.rsbi.ro/ro/contact/</string>
+    <string name="RSBI_blog">https://www.rsbi.ro/ro/blog/</string>
+    <string name="RSBI_covid19">https://www.rsbi.ro/ro/covid-19/</string>
+    <string name="RSBI_study">https://www.rsbi.ro/ro/studii/</string>
+    <string name="RSBI_work">https://www.rsbi.ro/ro/category/current-job-offers/</string>
+    <string name="RSBI_public_engagement">https://www.rsbi.ro/ro/category/public-engagement/</string>
+    <string name="RSBI_events">https://www.rsbi.ro/ro/category/rsbi-events/</string>
+    <string name="RSBI_external_events">https://www.rsbi.ro/ro/category/external-events/</string>
+    <string name="RSBI_seminars">https://www.rsbi.ro/ro/robioinfo-seminars/</string>
+    <string name="RSBI_about_bioinformatics">https://www.rsbi.ro/ro/popularizarea-stiintei/</string>
+    <string name="RSBI_work_and_study">https://www.rsbi.ro/ro/9073-2/</string>
+    <string name="RSBI_essential_skills">https://www.rsbi.ro/ro/popularizarea-stiintei/competente-esentiale/</string>
+    <string name="RSBI_bioinformatics_in_romania">https://www.rsbi.ro/ro/popularizarea-stiintei/8919-2/</string>
+    <string name="RSBI_become_a_member">https://www.rsbi.ro/registration/</string>
+    <string name="RSBI_subscribe_to_newsletter">https://www.rsbi.ro/subscribe-to-our-newsletter/</string>
+    <string name="RSBI_facebook">https://www.facebook.com/RoBioinfo/</string>
+    <string name="RSBI_twiteer">https://twitter.com/robioinfo</string>
+    <string name="RSBI_linkedin">https://www.linkedin.com/company/robioinfo/</string>
+    <string name="RSBI_terms_and_conditions">https://www.rsbi.ro/terms-and-conditions/</string>
+    <string name="RSBI_privacy_policy">https://www.rsbi.ro/privacy-policy/</string>
+    <string name="RSBI_GDPR_policy">https://www.rsbi.ro/ro/pdcp/</string>
+
+
+    <string name="RSBI_seminar_12">https://www.rsbi.ro/2021/07/01/12th-robioinfo-seminar-ai-and-ml-in-science-5-july-2021-online/</string>
+    <string name="RSBI_registration_form_12">https://docs.google.com/forms/d/e/1FAIpQLSeilnXZEOYwYGZJmkHA64Q3Q2UBJ8WK-hKj8ql1b0rZ0uacGw/viewform</string>
+
+    <string name="RSBI_seminar_11">https://www.rsbi.ro/2021/05/26/11th-robioinfo-seminar-cancer-genomics-june-2021-online/</string>
+    <string name="RSBI_registration_form_11">https://docs.google.com/forms/d/e/1FAIpQLSdS5gf9FWgABNHcq_MSHD7AAdErQn1iXQvZZGJ1qPkLYcxFuw/viewform</string>
+
+    <string name="RSBI_seminar_10">https://www.rsbi.ro/2021/04/20/10th-robioinfo-seminar-ngs-data-analysis-october-2021-online/</string>
+    <string name="RSBI_registration_form_10">missing</string>
+
+    <string name="RSBI_seminar_9">https://www.rsbi.ro/2021/03/10/metagenomics/</string>
+    <string name="RSBI_registration_form_9">https://docs.google.com/forms/d/e/1FAIpQLSdS5gf9FWgABNHcq_MSHD7AAdErQn1iXQvZZGJ1qPkLYcxFuw/viewform</string>
+
+    <string name="RSBI_seminars_planned_2021">https://www.rsbi.ro/2021/03/01/robioinfo-seminars-in-2021/</string>
+
+    <string name="RSBI_seminar_8"></string>
+    <string name="RSBI_registration_form_8"></string>
+
+    <string name="RSBI_seminar_7"></string>
+    <string name="RSBI_registration_form_7"></string>
+
+    <string name="RSBI_seminar_6"></string>
+    <string name="RSBI_registration_form_6"></string>
+
+    <string name="RSBI_seminar_5"></string>
+    <string name="RSBI_registration_form_5"></string>
+
+
+    <string name="RSBI_seminar_4"></string>
+    <string name="RSBI_registration_form_4"></string>
+
+    <string-array name="RSBI_pages_URLs">
+        <item>https://www.rsbi.ro</item>
+        <item>https://www.rsbi.ro/about-us/</item>
+        <item>https://www.rsbi.ro/about-us/steering-committee/</item>
+        <item>https://www.rsbi.ro/about-us/member-list/</item>
+        <item>https://www.rsbi.ro/contact/</item>
+        <item>https://www.rsbi.ro/blog/</item>
+        <item>https://www.rsbi.ro/covid-19/</item>
+        <item>https://www.rsbi.ro/studii/</item>
+        <item>https://www.rsbi.ro/category/current-job-offers/</item>
+        <item>https://www.rsbi.ro/category/public-engagement/</item>
+        <item>https://www.rsbi.ro/category/rsbi-events/</item>
+        <item>https://www.rsbi.ro/category/external-events/</item>
+        <item>https://www.rsbi.ro/robioinfo-seminars/</item>
+        <item>https://www.rsbi.ro/popularizarea-stiintei/</item>
+        <item>https://www.rsbi.ro/9073-2/</item>
+        <item>https://www.rsbi.ro/popularizarea-stiintei/competente-esentiale/</item>
+        <item>https://www.rsbi.ro/popularizarea-stiintei/8919-2/</item>
+        <item>https://www.rsbi.ro/registration/</item>
+        <item>https://www.rsbi.ro/subscribe-to-our-newsletter/</item>
+        <item>https://www.rsbi.ro/terms-and-conditions/</item>
+        <item>https://www.rsbi.ro/privacy-policy/</item>
+        <item>https://www.rsbi.ro/pdcp/</item>
+
+        <item>https://www.facebook.com/RoBioinfo/</item>
+        <item>https://twitter.com/robioinfo</item>
+        <item>https://www.linkedin.com/company/robioinfo/</item>
+    </string-array>
+
 </resources>

@@ -1,6 +1,7 @@
 package ro.rsbideveloper.rsbi
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import android.view.Menu
@@ -9,6 +10,13 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
+import io.ktor.client.*
+import io.ktor.client.engine.cio.*
+import io.ktor.client.features.*
+import io.ktor.client.features.get
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
+import kotlinx.coroutines.runBlocking
 import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 
 // <TODO> there is a possibility for the server to refuse / blacklist the client's
@@ -71,6 +79,8 @@ class MainActivity : AppCompatActivity() {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+    // <TODO> .xml assets, .html assets
+//        val loadedXML = assets.open("posts.html")
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
         val navController = navHostFragment.navController
@@ -107,6 +117,13 @@ class MainActivity : AppCompatActivity() {
         val navController2 = navHostFragment.navController
         findViewById<NavigationView>(R.id.MainActivity_navigation_view)
             .setupWithNavController(navController2)
+
+
+        // <TODO> EXPERIMENTAL
+        runBlocking {
+            getAllPages()
+        }
+
     }
 
 
@@ -152,4 +169,44 @@ class MainActivity : AppCompatActivity() {
     // <TODO> implement the bottom navigation bar such that the nav graph can be simpler [as it stands,
         // it needs to be a bidirectional K4 graph + that (Splashscreen -> Homepage)]
     // <TODO>
+
+    suspend fun getAllPages() {
+        val pagesHtml: MutableList<String> = mutableListOf()
+        val URLs = resources.getStringArray(R.array.RSBI_pages_URLs)
+        for(URL in URLs) {
+            Log.d("TAG", "URLs list: ${URL}")
+            try {
+                val client = HttpClient(CIO)
+                val response: HttpResponse = client.get(URL)
+                //                pagesHtml.add(response)
+                client.close()
+
+                // <TODO> add to a database, check for update, etc.
+
+            } catch(e: Exception) {
+                Log.d("TAG", "Exception: ${e.message}")
+            }
+        }
+        Log.d("TAG", pagesHtml.size.toString())
+    }
+
+    suspend fun getHTML(URL: String): String {
+        val client = HttpClient(CIO)
+        val response: HttpResponse = client.get(URL)
+        //        Log.d("TAG", response.toString())
+        //        Log.d("TAG", response.headers.toString())
+        //        Log.d("TAG", response.call.toString())
+
+        var content: String = ""
+        var line: String? = ""
+
+        while(line != null) {
+            //            Log.d("TAG", line)
+            content += line
+            line = response.content.readUTF8Line(1000)
+        }
+        client.close()
+
+        return content
+    }
 }

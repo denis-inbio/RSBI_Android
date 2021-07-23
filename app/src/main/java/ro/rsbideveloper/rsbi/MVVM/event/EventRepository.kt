@@ -24,6 +24,6 @@ class EventRepository(private val dao: EventDao) {
 
     // <TODO> why is this supposed not to be suspend ? why is "suspend" redundant here ?
     suspend fun selectById(eventId: Int) {
-        dao.selectById(eventId)
+//        dao.selectById(eventId)
     }
 }

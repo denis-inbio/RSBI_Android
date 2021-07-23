@@ -29,6 +29,11 @@ class Splashscreen : Fragment(R.layout.splashcreen) {
             startActivity(Intent(context, WebViewRSBI::class.java))
         }
 
+        binding.SplashscreenBtnPicker.setOnClickListener {
+            findNavController().navigate(SplashscreenDirections
+                .actionSplashscreenNavToPopUpDialog())
+        }
+
         return binding.root
     }
 

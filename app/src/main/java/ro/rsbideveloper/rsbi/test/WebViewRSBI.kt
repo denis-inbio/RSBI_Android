@@ -17,9 +17,9 @@ class WebViewRSBI : AppCompatActivity(R.layout.web_view_rsbi) {
 
         binding.webViewRsbiWebView.apply {
             this.webViewClient = WebViewClient()
-            this.settings.javaScriptEnabled = false // <TODO> what to do here ? how much of the website relies on this ?
+            this.settings.javaScriptEnabled = true // <TODO> what to do here ? how much of the website relies on this ? (well, the hamburger icon depends on it)
 
-            this.loadUrl(getString(R.string.RSBI_website_URL))
+            this.loadUrl(getString(R.string.RSBI_home))
         }
     }
 
@@ -28,7 +28,7 @@ class WebViewRSBI : AppCompatActivity(R.layout.web_view_rsbi) {
             binding.webViewRsbiWebView.goBack()
         } else {
             super.onBackPressed()
-//            finish()  // <TODO> do this or is it not required ?
+            finish()  // <TODO> do this or is it not required ?
         }
     }
 }

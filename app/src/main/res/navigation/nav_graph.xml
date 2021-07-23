@@ -16,6 +16,9 @@
             app:destination="@id/Home_page_Nav"
             app:popUpTo="@id/Splashscreen_Nav"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_Splashscreen_Nav_to_popUpDialog"
+            app:destination="@id/popUpDialog" />
     </fragment>
     <fragment
         android:id="@+id/Home_page_Nav"
@@ -133,4 +136,9 @@
         android:name="ro.rsbideveloper.rsbi.dialogs.DetailedViewEvent"
         android:label="detailed_view_event"
         tools:layout="@layout/detailed_view_event" />
+    <fragment
+        android:id="@+id/popUpDialog"
+        android:name="ro.rsbideveloper.rsbi.test.PopUpDialog"
+        android:label="PopUpDialog"
+        tools:layout="@layout/pop_up_dialog" />
 </navigation>

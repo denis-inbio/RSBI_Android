@@ -219,11 +219,6 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_Splashscreen_Nav_to_webViewRSBI">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -246,18 +241,6 @@
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="WebViewRSBI_Nav">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-208" />
-                            <option name="y" value="780" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -300,6 +283,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="popUpDialog">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-268" />
+                            <option name="y" value="76" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

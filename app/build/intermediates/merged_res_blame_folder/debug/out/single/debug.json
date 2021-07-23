@@ -134,5 +134,9 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_work_24.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_work_24.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_pop_up_dialog.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\pop_up_dialog.xml"
     }
 ]
