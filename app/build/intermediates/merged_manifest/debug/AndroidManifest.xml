@@ -9,11 +9,11 @@
         android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- Permission will be merged into the manifest of the hosting app. -->
     <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- TODO: android:allowBackup -> this affects what happens to the databases when uninstalling the app -->
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -22,21 +22,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.RSBI" >
+        <service
+            android:name="ro.rsbideveloper.rsbi.test.ServiceCom"
+            android:label="ServiceTesting" />
+
+        <receiver
+            android:name="ro.rsbideveloper.rsbi.test.AirplaneModeChangedBroadcastReceiver"
+            android:label="AirplaneBroadcastReceiver" >
+
+            <!-- intent-filter ? -->
+        </receiver>
+
         <activity
             android:name="ro.rsbideveloper.rsbi.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.RSBI.NoActionBar" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUser" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="ro.rsbideveloper.rsbi.test.WebViewRSBI"
-            android:label="RSBI_webview"
-            android:theme="@style/Theme.RSBI.NoActionBar" />
+        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

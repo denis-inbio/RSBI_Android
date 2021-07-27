@@ -4,7 +4,9 @@
     package="ro.rsbideveloper.rsbi">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <!-- TODO: android:allowBackup -> this affects what happens to the databases when uninstalling the app -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,20 +14,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RSBI">
+
+        <service
+            android:name=".test.ServiceCom"
+            android:label="ServiceTesting"/>
+
+        <receiver
+            android:name=".test.AirplaneModeChangedBroadcastReceiver"
+            android:label="AirplaneBroadcastReceiver">
+            <!-- intent-filter ? -->
+        </receiver>
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.RSBI.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
         </activity>
-        <activity
-            android:name=".test.WebViewRSBI"
-            android:label="RSBI_webview"
-            android:theme="@style/Theme.RSBI.NoActionBar"/>
+
+    <activity android:name=".ui.entrypointAnonymousUser.AnonymousUser">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".ui.entrypointWelcome.Welcome"></activity>
+
     </application>
 
 </manifest>

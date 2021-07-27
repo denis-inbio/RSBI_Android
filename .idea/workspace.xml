@@ -6,8 +6,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="TAG" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ARTICLES" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
@@ -34,14 +34,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c52347b2-25dc-40b1-bc59-f621f71857ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTML.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLDatabase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/ComposeActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/PopUpDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/pop_up_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/empdetail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/article/Article.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/AirplaneModeChangedBroadcastReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/AlarmReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/ArticlesRecyclerViewAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/DestinationActivityForAlarm.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/MotionLayoutPage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/MyIntentService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/NotificationsTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/SaveFileToStorage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/ServiceCom.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/XMLParser.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/dialogs/DetailedViewEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/dialogs/WriteEvent_form.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/services/AlarmNotifications.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/services/SynchronizePageHTML.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/ui/entrypointAnonymousUser/AnonymousUser.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/ui/entrypointAnonymousUser/AnonymousUserViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/ui/entrypointWelcome/Welcome.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/ui/entrypointWelcome/WelcomePageCommunity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/ui/entrypointWelcome/WelcomePageElixir.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/ui/entrypointWelcome/WelcomePageRSBI.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/article_event_detailed_form.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/article_event_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/article_event_list_form.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/generic_event.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_page_community.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_page_elixir.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/welcome_page_rsbi.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/xml_parser.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/generic_event_scene.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/motion_layout_page_scene.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -56,30 +81,63 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_5_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/RSBI.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/RSBI.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/AboutUsPageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/BioinformaticsInRomaniaPageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/BlogPageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/BottomNavigationBarBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/ContactPageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/EssentialSkillsPageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/HomePageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/PublicEngagementPageBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/ro/rsbideveloper/rsbi/databinding/StudyPageBinding.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_base_class_log_artifact/debug/out/ro.rsbideveloper.rsbi-binding_classes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_base_class_log_artifact/debug/out/ro.rsbideveloper.rsbi-binding_classes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/splashcreen-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/splashcreen-layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/about_us_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/bioinformatics_in_romania_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/blog_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/bottom_navigation_bar-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/contact_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/essential_skills_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/home_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/public_engagement_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/splashcreen-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/study_page-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/AboutUsPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/BioinformaticsInRomaniaPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/BlogPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/BottomNavigationBarBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/ContactPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/EssentialSkillsPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/EventsPageBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/EventsPageBinding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/HomePageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/PublicEngagementPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/StudyPageBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/WorkPageBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/ro/rsbideveloper/rsbi/databinding/WorkPageBinding.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml" afterDir="false" />
@@ -90,16 +148,49 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/layout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/BuildConfig.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/Splashscreen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/Splashscreen.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/Splashscreen.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/SplashscreenDirections.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/SplashscreenDirections.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_splashcreen.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_splashcreen.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/navigation_nav_graph.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/navigation_nav_graph.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/AboutUsPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/BioinformaticsInRomaniaPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/BlogPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/BottomNavigationBarBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/ContactPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/EssentialSkillsPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/EventsPageBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/EventsPageBinding.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/HomePageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/PublicEngagementPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/SplashcreenBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/StudyPageBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/WorkPageBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/databinding/WorkPageBinding.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/About_us_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Bioinformatics_in_Romania_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Blog_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Contact_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Essential_skills_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Events_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Events_pageDirections.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Events_pageDirections.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Home_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Home_pageDirections.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Home_pageDirections.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Public_engagement_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Public_engagement_pageDirections.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Public_engagement_pageDirections.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Study_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Work_page.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Work_pageDirections.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/ro/rsbideveloper/rsbi/pages/Work_pageDirections.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_about_us_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_bioinformatics_in_romania_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_blog_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_bottom_navigation_bar.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_contact_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_essential_skills_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_home_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_public_engagement_page.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_splashcreen.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_study_page.xml.flat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
@@ -184,20 +275,62 @@
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-entries.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-entries.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-structure.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-structure.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/Splashscreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/Splashscreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/Splashscreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/About_us_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Bioinformatics_in_Romania_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Blog_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Contact_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Essential_skills_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Events_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Home_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Public_engagement_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Study_page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/ro/rsbideveloper/rsbi/pages/Work_page.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/Event.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/Event.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/EventDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/EventDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/EventRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/EventViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/Event.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/event/Event.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/event/EventDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/event/EventDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/event/EventRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/event/EventViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/event/EventViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTML.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/pageHTML/PageHTML.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MVVM/pageHTML/PageHTMLViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/Splashscreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/Splashscreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/WebViewRSBI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/WebViewRSBI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/splashcreen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/splashcreen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/drawer_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/dialogs/DetailedViewEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/dialogs/WriteEvent_form.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/About_us_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Bioinformatics_in_Romania_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Blog_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Contact_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Essential_skills_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Events_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Home_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Public_engagement_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Study_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/pages/Work_page.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/recycler_adapters/EventsRecyclerViewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/EventsRecyclerViewAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/ComposeActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/PopUpDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ro/rsbideveloper/rsbi/test/PopUpDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/about_us_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bioinformatics_in_romania_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/blog_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_navigation_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/contact_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/detailed_view_event.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/essential_skills_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/events_page_recycler_view_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/pop_up_dialog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/public_engagement_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/splashcreen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/study_page.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/logo-en-rect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,8 +347,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -239,11 +372,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="ro.rsbideveloper.rsbi.MVVM.event" />
+      <recent name="ro.rsbideveloper.rsbi.MVVM.article" />
       <recent name="ro.rsbideveloper.rsbi.MVVM" />
-      <recent name="ro.rsbideveloper.rsbi.pages" />
+      <recent name="ro.rsbideveloper.rsbi.welcome" />
+      <recent name="ro.rsbideveloper.rsbi.interactionOne" />
+      <recent name="ro.rsbideveloper.rsbi.MVVM.event" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AndroidStudioProjects\RSBI_Android\app\src\main\java\ro\rsbideveloper\rsbi\test" />
       <recent name="D:\AndroidStudioProjects\RSBI_Android\app\src\main\java\ro\rsbideveloper\rsbi\MVVM\pageHTML" />
     </key>
   </component>
@@ -342,50 +478,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="39" key="#Auto_Import/0.0.1536.824@0.0.1536.824" timestamp="1626334683443" />
-    <state x="560" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1626697779902">
+    <state x="560" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1627386836081">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="560" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1626697779902" />
+    <state x="560" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1627386836081" />
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1626507285059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1626507285059" />
-    <state x="548" y="168" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1627034066597">
+    <state x="387" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1627392818643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="168" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1627034066597" />
+    <state x="387" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1627392818643" />
+    <state x="494" y="157" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1627295313997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="494" y="157" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1627295313997" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627392991571">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1627392991571" />
+    <state x="548" y="168" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1627388485238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="168" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1627388485238" />
     <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1626339094460">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1626339094460" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1627016576972">
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1627390419575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1627016576972" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1627390419575" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1626463237625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1626463237625" />
-    <state width="746" height="263" key="GridCell.Tab.0.bottom" timestamp="1627034055587">
+    <state width="1493" height="298" key="GridCell.Tab.0.bottom" timestamp="1627304262035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="263" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627034055587" />
-    <state width="746" height="263" key="GridCell.Tab.0.center" timestamp="1627034055587">
+    <state width="1493" height="298" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627304262035" />
+    <state width="1493" height="298" key="GridCell.Tab.0.center" timestamp="1627304262034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="263" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1627034055587" />
-    <state width="746" height="263" key="GridCell.Tab.0.left" timestamp="1627034055587">
+    <state width="1493" height="298" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1627304262034" />
+    <state width="1493" height="298" key="GridCell.Tab.0.left" timestamp="1627304262034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="263" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1627034055587" />
-    <state width="746" height="263" key="GridCell.Tab.0.right" timestamp="1627034055587">
+    <state width="1493" height="298" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1627304262034" />
+    <state width="1493" height="298" key="GridCell.Tab.0.right" timestamp="1627304262034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="263" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627034055587" />
-    <state x="478" y="116" width="579" height="592" key="find.popup" timestamp="1626515999513">
+    <state width="1493" height="298" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627304262034" />
+    <state x="374" y="23" width="898" height="778" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1627302001325">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="116" width="579" height="592" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1626515999513" />
+    <state x="374" y="23" width="898" height="778" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1627302001325" />
+    <state x="478" y="116" width="579" height="592" key="find.popup" timestamp="1627392004720">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="116" width="579" height="592" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1627392004720" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1626698245752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

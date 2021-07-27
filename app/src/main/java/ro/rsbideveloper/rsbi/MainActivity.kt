@@ -1,23 +1,28 @@
 package ro.rsbideveloper.rsbi
 
+import android.app.Application
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import android.view.Menu
-import android.view.MenuItem
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.*
-import com.google.android.material.navigation.NavigationView
+import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
-import io.ktor.client.features.*
-import io.ktor.client.features.get
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
+import org.jsoup.Jsoup
+import ro.rsbideveloper.rsbi.data.article.Article
+import ro.rsbideveloper.rsbi.data.pageHTML.PageHTML
+import ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLViewModel
 import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
+import ro.rsbideveloper.rsbi.test.*
 
 // <TODO> there is a possibility for the server to refuse / blacklist the client's
     // IP address, so handle that case as well (it blocked mine as I was using Tor, because
@@ -67,23 +72,247 @@ import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 // <TODO> use an ActionBar or not ? the main reason for using one would be to have an indication of the current fragment,
     // but that could be done in many other ways I guess; and essentially, I'd only care about the ActionBar if it were a
     // necessity for the NavigationDrawer
+// <TODO> what is this for ?
+    //    private lateinit var appBarConfiguration: AppBarConfiguration
+// <TODO> .xml assets, .html assets
+    //    val loadedXML = assets.open("posts.html")
+// <TODO> <*?> OptionsItem vs ContextItem -> what kind of items are the BottomNavBar's items ?
+    // does the bottom nav bar need to be associated with the activity in Kotlin code, or ..?
+    // or is there some default inflater being called that fails to make an association ?
+    // why doesn't the NavController automatically match the item id's with the destination's id ?
+    // or, how does onNavDestinationSelected() know which item is a selection and which isn't ?
+    // apparently the bottom navigation bar is not properly set up ?
+// <TODO> remove the app bar, the floating action button (could be used
+    //  later for something ? maybe for adding a post, creating a webinar entry,
+    //  remove menu items)
+// <TODO> "are you a member ?" (members can add webinars)
+// <TODO> webinar registration survey -> send email ? (RSBI server does this, I don't have access)
+// <TODO> implement the bottom navigation bar such that the nav graph can be simpler [as it stands,
+    // it needs to be a bidirectional K4 graph + that (Splashscreen -> Homepage)]
+// <TODO> EXPERIMENTAL, services
+    //        binding.serviceComStartBtn.setOnClickListener {
+    //            Intent(this, ServiceCom::class.java).also {
+    //                startService(it)
+    //                // <TODO> use ViewModel; this decouples the modifier from having to track all the Observers / entities
+    //                    // affected by changes here
+    //                binding.serviceComState.text = "Service is running"
+    //            }
+    //        }
+    //        binding.serviceComStopBtn.setOnClickListener {
+    //            ServiceCom.stopService()
+    //        }
+    //        binding.serviceComSendBtn.setOnClickListener {
+    //            Intent(this, ServiceCom::class.java).also {
+    //                it.extras?.putString("data", binding.serviceComInput.text.toString())
+    //                startService(it)
+    //                binding.serviceComState.text = "Service is started with data being passed: ${binding.serviceComInput.text.toString()}"
+    //            }
+    //        }
 // <TODO>
 
 class MainActivity : AppCompatActivity() {
-    // <TODO> what is this for ?
-//    private lateinit var appBarConfiguration: AppBarConfiguration
+
     private lateinit var binding: MainActivityBinding
+    private lateinit var viewModel: PageHTMLViewModel
+    private lateinit var broadcastReceiver: AirplaneModeChangedBroadcastReceiver
+    private val articles: MutableList<Article> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-    // <TODO> .xml assets, .html assets
-//        val loadedXML = assets.open("posts.html")
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
-        val navController = navHostFragment.navController
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
+//        val navController = navHostFragment.navController
+//
+//
+//        /// DRAWER LAYOUT AND NAVIGATION DRAWER
+//        val drawerLayout = findViewById<DrawerLayout>(R.id.MainActivity_layout)
+//        binding.MainActivityLayout
+//        val appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+//
+//
+//        val navHostFragment2 =
+//            supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
+//        val navController2 = navHostFragment.navController
+//        findViewById<NavigationView>(R.id.MainActivity_navigation_view)
+//            .setupWithNavController(navController2)
+
+
+        viewModel = ViewModelProvider.AndroidViewModelFactory
+            .getInstance(applicationContext as Application).create(PageHTMLViewModel::class.java)
+
+
+//        // <TODO> EXPERIMENTAL, getting HTML of pages
+////        runBlocking {
+////            getAllPages()
+////        }
+
+        broadcastReceiver = AirplaneModeChangedBroadcastReceiver()  // <TODO> supposedly there was something about a memory leak unless
+                // the broadcastReceiver is unregistered in the onStop() lifecycle milestone / step
+        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
+            registerReceiver(broadcastReceiver, it)
+        }
+
+
+        /// ALARM, NOTIFICATIONS, BROADCAST
+        CreateNotificationManager()
+
+
+        /// DOM parsing
+        runBlocking(Dispatchers.IO) {
+            synchronizeFeed()
+        }
+    }
+
+    private fun extractArticles(codeHTML: String) {
+        val document = Jsoup.parse(codeHTML)
+        val articles = document.body().select("article")
+
+        for(article in articles) {
+            val title = article.select(".entry-title a").attr("title")
+            val detailedArticleURL = article.select(".entry-title a").attr("href")
+            val imgURL = article.select(".card-image img").attr("src")  // <TODO> might be missing, not all articles have a photo
+            val content = article.select(".entry-summary p").text().toString().replace("Read more…", "", true) // <TODO> remove "Read more"
+            val category = article.select(".category").text()
+            val categoryURL = article.select(".category").attr("href")  // <TODO> missing
+            val author = article.select("div .author a").attr("title")  // <TODO> there is the alternative with <b>.text()
+            val authorURL = article.select("div .author a").attr("href")
+            val creationTime = article.select(".entry-date").attr("datetime")
+            val latestModificationTime = article.select(".updated").attr("datetime")
+
+            Log.d("ARTICLES",
+                "Title: $title\n" +
+                    "DetailedArticleURL: $detailedArticleURL\n" +
+                    "Image URL: $imgURL\n" +
+                    "Content: $content\n" +
+                    "Category: $category\n" +
+                    "Category URL: $categoryURL\n" +
+                    "Author: $author\n" +
+                    "Author URL: $authorURL\n" +
+                    "Creation Time: $creationTime\n" +
+                    "Latest Modification Time: $latestModificationTime\n")
+
+            Glide
+                .with(this)
+                .load(imgURL)
+                .centerCrop()
+                .placeholder(R.drawable.ic_baseline_search_24)
+                .into(binding.MainActivityImageTest)
+
+            binding.textView5.text = title
+            binding.textView6.text = imgURL
+            binding.textView7.text = category
+            binding.textView8.text = content
+        }
+
+
+
+    }
+
+    private suspend fun synchronizeFeed() {
+            // <TODO> Order of asynchronous retrieval, one page request at a time, but
+                // asynchronously synchronized with the (Ui -> observe: ViewModel)
+
+        // RSBI events
+        // External events
+        // Public engagement
+        // Blog
+        // Job offers
+
+        val URLs = resources.getStringArray(R.array.feed_URLs)
+
+//        <string-array name="events_or_feed">
+//        <item>https://www.rsbi.ro/category/rsbi-events/</item>
+//        <item>https://www.rsbi.ro/category/external-events/</item>
+//        <item>https://www.rsbi.ro/category/public-engagement/</item>
+//        <item>https://www.rsbi.ro/category/blog/</item>
+//        <item>https://www.rsbi.ro/category/current-job-offers/</item>
+
+        for(URL in URLs) {
+            Log.d("SYNCFEED", "Synchronizing $URL")
+            try {
+                val codeHTML = getHTML(URL)
+//                Log.d("SYNCFEED", "HTML code: $codeHTML")
+
+                // <TODO> compute its hash or whatever is needed to check for updates in future requests
+                    // this is related to learning about HTTP requests and how the UPDATE request / method works
+
+                // <TODO> parse the HTML and extract the <article> tags; check for Next <a> and get those as well,
+                    // corroborating the data (from all URLs ?) in a single list
+//                val pageHTML = PageHTML(0, URL, codeHTML)
+//                viewModel.addPageHTML(pageHTML)
+//                Log.d("VIEWMODEL", "Added a local copy of the URL ${URL}")
+
+                extractArticles(codeHTML)
+
+            } catch(e: Exception) {
+                Log.d("SYNCFEED", "Exception: ${e.message}")
+            }
+        }
+    }
+
+
+    suspend fun getAllPages() {
+        val pagesHtml: MutableList<String> = mutableListOf()
+        val URLs = resources.getStringArray(R.array.RSBI_pages_URLs)
+        for(URL in URLs) {
+            Log.d("TAG", "URLs list: ${URL}")
+            try {
+                val content = getHTML(URL)
+                Log.d("CONTENT", content)
+
+                // <TODO> add to a database, check for update, etc.
+                val pageHTML = PageHTML(0, URL, content)
+                viewModel.addPageHTML(pageHTML)
+                Log.d("VIEWMODEL", "Added a local copy of the URL ${URL}")
+
+            } catch(e: Exception) {
+                Log.d("TAG", "Exception: ${e.message}")
+            }
+        }
+        Log.d("TAG", pagesHtml.size.toString())
+    }
+
+    suspend fun getHTML(URL: String): String {
+        val client = HttpClient(CIO)
+        val response: HttpResponse = client.get(URL)
+        //        Log.d("TAG", response.toString())
+        //        Log.d("TAG", response.headers.toString())
+        //        Log.d("TAG", response.call.toString())
+
+        var content = StringBuilder()
+        var line: String? = ""
+
+        while(line != null) {
+            //            Log.d("TAG", line)
+            content.append(line)
+            line = response.content.readUTF8Line(10000)
+        }
+        client.close()
+
+        return content.toString()
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(broadcastReceiver)
+    }
+
+    private fun CreateNotificationManager() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name: CharSequence = "Reminder Channel"
+            val channel = NotificationChannel(AlarmReceiver.channelId, name, NotificationManager.IMPORTANCE_HIGH)
+            channel.description = "A simple description"
+
+            val notificationManager = getSystemService(NotificationManager::class.java)
+        }
+    }
+}
+
+/// <TODO> Leftover code
 
 //        binding.MainActivityBottomNav.setupWithNavController(navController)
 //        setupActionBarWithNavController(navController)
@@ -98,7 +327,7 @@ class MainActivity : AppCompatActivity() {
 //                .setAction("Action", null).show()
 //        }
 
-        /// COLLAPSING TOOLBAR
+/// COLLAPSING TOOLBAR
 //        val layout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar_layout)
 //        val toolbar = findViewById<Toolbar>(R.id.toolbar)
 //        val navHostFragment =
@@ -107,26 +336,7 @@ class MainActivity : AppCompatActivity() {
 //        val appBarConfiguration = AppBarConfiguration(navController.graph)
 //        layout.setupWithNavController(toolbar, navController, appBarConfiguration)
 
-        /// DRAWER LAYOUT AND NAVIGATION DRAWER
-        val drawerLayout = findViewById<DrawerLayout>(R.id.MainActivity_layout)
-        binding.MainActivityLayout
-        val appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
-
-        val navHostFragment2 =
-            supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
-        val navController2 = navHostFragment.navController
-        findViewById<NavigationView>(R.id.MainActivity_navigation_view)
-            .setupWithNavController(navController2)
-
-
-        // <TODO> EXPERIMENTAL
-        runBlocking {
-            getAllPages()
-        }
-
-    }
-
-
+/// ???
 //    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 //        return super.onCreateOptionsMenu(menu)
 //    }
@@ -154,59 +364,22 @@ class MainActivity : AppCompatActivity() {
 //    }
 //
 
-    // <*?> OptionsItem vs ContextItem -> what kind of items are the BottomNavBar's items ?
-        // does the bottom nav bar need to be associated with the activity in Kotlin code, or ..?
-        // or is there some default inflater being called that fails to make an association ?
-        // why doesn't the NavController automatically match the item id's with the destination's id ?
-        // or, how does onNavDestinationSelected() know which item is a selection and which isn't ?
-        // apparently the bottom navigation bar is not properly set up ?
-
-    // <TODO> remove the app bar, the floating action button (could be used
-        //  later for something ? maybe for adding a post, creating a webinar entry,
-        //  remove menu items)
-    // <TODO> "are you a member ?" (members can add webinars)
-    // <TODO> webinar registration survey -> send email ? (RSBI server does this, I don't have access)
-    // <TODO> implement the bottom navigation bar such that the nav graph can be simpler [as it stands,
-        // it needs to be a bidirectional K4 graph + that (Splashscreen -> Homepage)]
-    // <TODO>
-
-    suspend fun getAllPages() {
-        val pagesHtml: MutableList<String> = mutableListOf()
-        val URLs = resources.getStringArray(R.array.RSBI_pages_URLs)
-        for(URL in URLs) {
-            Log.d("TAG", "URLs list: ${URL}")
-            try {
-                val client = HttpClient(CIO)
-                val response: HttpResponse = client.get(URL)
-                //                pagesHtml.add(response)
-                client.close()
-
-                // <TODO> add to a database, check for update, etc.
-
-            } catch(e: Exception) {
-                Log.d("TAG", "Exception: ${e.message}")
-            }
-        }
-        Log.d("TAG", pagesHtml.size.toString())
-    }
-
-    suspend fun getHTML(URL: String): String {
-        val client = HttpClient(CIO)
-        val response: HttpResponse = client.get(URL)
-        //        Log.d("TAG", response.toString())
-        //        Log.d("TAG", response.headers.toString())
-        //        Log.d("TAG", response.call.toString())
-
-        var content: String = ""
-        var line: String? = ""
-
-        while(line != null) {
-            //            Log.d("TAG", line)
-            content += line
-            line = response.content.readUTF8Line(1000)
-        }
-        client.close()
-
-        return content
-    }
-}
+/// ??
+//    private fun getHtmlFromWeb() {
+//        Thread(Runnable {
+//            val stringBuilder = StringBuilder()
+//            try {
+//                val doc: Document = Jsoup.connect("http://www.tutorialspoint.com/").get()
+//                val title: String = doc.title()
+//                val links: Elements = doc.select("a[href]")
+//                stringBuilder.append(title).append("\n")
+//                for (link in links) {
+//                    stringBuilder.append("\n").append("Link :
+//                        ").append(link.attr("href")).append("\n").append("Text : ").append(link.text())
+//                }
+//            } catch (e: IOException) {
+//                stringBuilder.append("Error : ").append(e.message).append("\n")
+//            }
+//            runOnUiThread { textView.text = stringBuilder.toString() }
+//        }).start()
+//    }
