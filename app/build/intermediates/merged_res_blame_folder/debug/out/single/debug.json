@@ -48,6 +48,10 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_warning_24.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_warning_24.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\navigation\\nav_graph.xml"
     },

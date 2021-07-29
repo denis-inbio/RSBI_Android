@@ -1750,6 +1750,7 @@ int drawable ic_baseline_home_24 0x7f08006a
 int drawable ic_baseline_perm_identity_24 0x7f08006b
 int drawable ic_baseline_rss_feed_24 0x7f08006c
 int drawable ic_baseline_search_24 0x7f08006d
+int drawable ic_baseline_warning_24 0x7f08009a
 int drawable ic_baseline_work_24 0x7f08006e
 int drawable ic_clock_black_24dp 0x7f08006f
 int drawable ic_keyboard_black_24dp 0x7f080070
@@ -1822,8 +1823,12 @@ int id BOTTOM_END 0x7f090018
 int id BOTTOM_START 0x7f090019
 int id CTRL 0x7f09001a
 int id EditDialog_root 0x7f09001b
-int id EditDialog_root_tvEmail 0x7f09001c
-int id EditDialog_root_tvName 0x7f09001d
+int id EditDialog_root_btnCancel 0x7f090209
+int id EditDialog_root_btnConfirm 0x7f09020a
+int id EditDialog_root_email 0x7f09020b
+int id EditDialog_root_inputLayout_email 0x7f09020c
+int id EditDialog_root_inputLayout_name 0x7f09020d
+int id EditDialog_root_name 0x7f09020e
 int id Events_page_btn 0x7f09001e
 int id Events_page_floatbtn_add_event 0x7f09001f
 int id Events_page_layout 0x7f090020
@@ -2041,6 +2046,7 @@ int id group_divider 0x7f0900f3
 int id grouping 0x7f0900f4
 int id groups 0x7f0900f5
 int id guideline 0x7f0900f6
+int id guideline2 0x7f09020f
 int id header_title 0x7f0900f7
 int id hide_in_inspector_tag 0x7f0900f8
 int id hideable 0x7f0900f9
@@ -2224,6 +2230,7 @@ int id sqlite_main_root_inputLayoutEmail 0x7f0901aa
 int id sqlite_main_root_inputLayoutName 0x7f0901ab
 int id sqlite_main_root_inputName 0x7f0901ac
 int id sqlite_main_root_recyclerList 0x7f0901ad
+int id sqlite_main_root_recyclerList_counter 0x7f090210
 int id square 0x7f0901ae
 int id src_atop 0x7f0901af
 int id src_in 0x7f0901b0

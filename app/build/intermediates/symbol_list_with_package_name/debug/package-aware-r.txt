@@ -1751,6 +1751,7 @@ drawable ic_baseline_home_24
 drawable ic_baseline_perm_identity_24
 drawable ic_baseline_rss_feed_24
 drawable ic_baseline_search_24
+drawable ic_baseline_warning_24
 drawable ic_baseline_work_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -1823,8 +1824,12 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id EditDialog_root
-id EditDialog_root_tvEmail
-id EditDialog_root_tvName
+id EditDialog_root_btnCancel
+id EditDialog_root_btnConfirm
+id EditDialog_root_email
+id EditDialog_root_inputLayout_email
+id EditDialog_root_inputLayout_name
+id EditDialog_root_name
 id Events_page_btn
 id Events_page_floatbtn_add_event
 id Events_page_layout
@@ -2042,6 +2047,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id guideline2
 id header_title
 id hide_in_inspector_tag
 id hideable
@@ -2225,6 +2231,7 @@ id sqlite_main_root_inputLayoutEmail
 id sqlite_main_root_inputLayoutName
 id sqlite_main_root_inputName
 id sqlite_main_root_recyclerList
+id sqlite_main_root_recyclerList_counter
 id square
 id src_atop
 id src_in

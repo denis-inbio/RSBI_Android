@@ -12,28 +12,30 @@
     <TextView
         android:id="@+id/SqliteListItem_root_tvName"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/SqliteListItem_root_ivEdit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
-        android:text="TextView"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/SqliteListItem_root_tvEmail"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/SqliteListItem_root_ivEdit"
-        app:layout_constraintStart_toEndOf="@id/SqliteListItem_root_tvName"
-        app:layout_constraintTop_toTopOf="parent"
 
-        android:text="TextView" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/SqliteListItem_root_tvName" />
 
     <ImageView
         android:id="@+id/SqliteListItem_root_ivEdit"
@@ -58,5 +60,12 @@
         app:layout_constraintTop_toTopOf="parent"
 
         android:src="@drawable/ic_baseline_delete_24"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="314dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
