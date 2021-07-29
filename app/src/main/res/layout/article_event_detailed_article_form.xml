@@ -6,7 +6,9 @@
 
     android:id="@+id/ArticleEventDetailedForm_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.entrypointAnonymousUser.AnonymousUserNavDetailedArticleForm">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ArticleEventDetailedForm_root_constraint"

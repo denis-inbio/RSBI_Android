@@ -102,7 +102,7 @@
 
 
 
-    <string-array name="feed_URLs">
+    <string-array name="articles_urls">
         <item>https://www.rsbi.ro/category/rsbi-events/</item>
         <item>https://www.rsbi.ro/category/external-events/</item>
         <item>https://www.rsbi.ro/category/public-engagement/</item>

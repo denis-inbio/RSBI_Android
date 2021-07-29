@@ -3,142 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/Splashscreen_Nav">
-
+    app:startDestination="@id/anonymousUserNavViewArticleList">
     <fragment
-        android:id="@+id/Splashscreen_Nav"
-        android:name="ro.rsbideveloper.rsbi.Splashscreen"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/splashcreen">
-
+        android:id="@+id/anonymousUserNavViewArticleList"
+        android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserNavViewArticleList"
+        android:label="AnonymousUserNavViewArticleList" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/Home_page_Nav"
-            app:popUpTo="@id/Splashscreen_Nav"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_Splashscreen_Nav_to_popUpDialog"
-            app:destination="@id/popUpDialog" />
+            android:id="@+id/action_anonymousUserNavViewArticleList_to_anonymousUserNavViewDetailedArticle"
+            app:destination="@id/anonymousUserNavViewDetailedArticle" />
     </fragment>
     <fragment
-        android:id="@+id/Home_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Home_page"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/home_page">
-        <action
-            android:id="@+id/action_Homepage_Nav_to_eventspage2"
-            app:destination="@id/Events_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Events_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Events_page"
-        android:label="Eventspage"
-        tools:layout="@layout/events_page" >
-        <action
-            android:id="@+id/action_eventspage_to_workpage2"
-            app:destination="@id/Work_page_Nav" />
-        <action
-            android:id="@+id/action_Events_page_Nav_to_WriteEvent_page_Nav"
-            app:destination="@id/WriteEvent_page_Nav" />
-        <action
-            android:id="@+id/action_Events_page_Nav_to_detailedViewEvent"
-            app:destination="@id/DetailedViewEvent_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Public_engagement_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Public_engagement_page"
-        android:label="Publicpage"
-        tools:layout="@layout/public_engagement_page">
-        <action
-            android:id="@+id/action_publicpage_to_Homepage_Nav2"
-            app:destination="@id/Home_page_Nav" />
-        <action
-            android:id="@+id/action_Public_engagement_page_Nav_to_essential_skills_page"
-            app:destination="@id/Essential_skills_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Work_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Work_page"
-        android:label="Workpage"
-        tools:layout="@layout/work_page" >
-        <action
-            android:id="@+id/action_workpage_to_publicpage"
-            app:destination="@id/Public_engagement_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/WriteEvent_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.dialogs.WriteEvent_form"
-        android:label="WriteEvent_page"
-        tools:layout="@layout/write_event_dialog">
-        <action
-            android:id="@+id/action_WriteEvent_page_Nav_to_Events_page_Nav"
-            app:destination="@id/Events_page_Nav" />
-        <argument
-            android:name="eventId"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/About_us_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.About_us_page"
-        android:label="About_us_page"
-        tools:layout="@layout/about_us_page">
-        <action
-            android:id="@+id/action_about_us_page_to_blog_page"
-            app:destination="@id/Blog_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Bioinformatics_in_Romania_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Bioinformatics_in_Romania_page"
-        android:label="Bioinformatics_in_Romania_page"
-        tools:layout="@layout/bioinformatics_in_romania_page">
-        <action
-            android:id="@+id/action_bioinformatics_in_Romania_page_to_about_us_page"
-            app:destination="@id/About_us_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Blog_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Blog_page"
-        android:label="Blog_page"
-        tools:layout="@layout/blog_page">
-        <action
-            android:id="@+id/action_blog_page_to_contact_page"
-            app:destination="@id/Contact_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Contact_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Contact_page"
-        android:label="Contact_page"
-        tools:layout="@layout/contact_page">
-        <action
-            android:id="@+id/action_contact_page_to_study_page"
-            app:destination="@id/Study_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Essential_skills_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Essential_skills_page"
-        android:label="Essential_skills_page"
-        tools:layout="@layout/essential_skills_page">
-        <action
-            android:id="@+id/action_essential_skills_page_to_bioinformatics_in_Romania_page"
-            app:destination="@id/Bioinformatics_in_Romania_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/Study_page_Nav"
-        android:name="ro.rsbideveloper.rsbi.pages.Study_page"
-        android:label="Study_page"
-        tools:layout="@layout/study_page">
-        <action
-            android:id="@+id/action_study_page_to_Home_page_Nav"
-            app:destination="@id/Home_page_Nav" />
-    </fragment>
-    <fragment
-        android:id="@+id/DetailedViewEvent_Nav"
-        android:name="ro.rsbideveloper.rsbi.dialogs.DetailedViewEvent"
-        android:label="detailed_view_event"
-        tools:layout="@layout/detailed_view_event" />
-    <fragment
-        android:id="@+id/popUpDialog"
-        android:name="ro.rsbideveloper.rsbi.test.PopUpDialog"
-        android:label="PopUpDialog"
-        tools:layout="@layout/pop_up_dialog" />
+        android:id="@+id/anonymousUserNavViewDetailedArticle"
+        android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserNavViewDetailedArticleForm"
+        android:label="AnonymousUserNavViewDetailedArticle" />
 </navigation>

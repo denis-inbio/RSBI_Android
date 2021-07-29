@@ -1,15 +1,20 @@
-ro/rsbideveloper/rsbi/pages/Home_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Home_pageDirections
 ro/rsbideveloper/rsbi/databinding/GenericEventBinding.java
  ro.rsbideveloper.rsbi.databinding.GenericEventBinding
+ro/rsbideveloper/rsbi/data/article/ArticleDao_Impl.java
+ ro.rsbideveloper.rsbi.data.article.ArticleDao_Impl
+ ro.rsbideveloper.rsbi.data.article.ArticleDao_Impl$1
+ ro.rsbideveloper.rsbi.data.article.ArticleDao_Impl$2
+ ro.rsbideveloper.rsbi.data.article.ArticleDao_Impl$3
+ ro.rsbideveloper.rsbi.data.article.ArticleDao_Impl$4
+ ro.rsbideveloper.rsbi.data.article.ArticleDao_Impl$5
+ro/rsbideveloper/rsbi/databinding/ArticleEventDetailedArticleFormBinding.java
+ ro.rsbideveloper.rsbi.databinding.ArticleEventDetailedArticleFormBinding
 ro/rsbideveloper/rsbi/databinding/XmlParserBinding.java
  ro.rsbideveloper.rsbi.databinding.XmlParserBinding
-ro/rsbideveloper/rsbi/pages/Contact_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Contact_pageDirections
+ro/rsbideveloper/rsbi/databinding/AnonymousUserPerspectiveBinding.java
+ ro.rsbideveloper.rsbi.databinding.AnonymousUserPerspectiveBinding
 ro/rsbideveloper/rsbi/databinding/ArticleEventListBinding.java
  ro.rsbideveloper.rsbi.databinding.ArticleEventListBinding
-ro/rsbideveloper/rsbi/pages/Essential_skills_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Essential_skills_pageDirections
 ro/rsbideveloper/rsbi/databinding/WelcomeBinding.java
  ro.rsbideveloper.rsbi.databinding.WelcomeBinding
 ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLDao_Impl.java
@@ -19,44 +24,28 @@ ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLDao_Impl.java
  ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLDao_Impl$3
  ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLDao_Impl$4
  ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLDao_Impl$5
+ro/rsbideveloper/rsbi/databinding/SqliteMainBinding.java
+ ro.rsbideveloper.rsbi.databinding.SqliteMainBinding
+ro/rsbideveloper/rsbi/databinding/EditDialogBinding.java
+ ro.rsbideveloper.rsbi.databinding.EditDialogBinding
 ro/rsbideveloper/rsbi/databinding/WelcomePageCommunityBinding.java
  ro.rsbideveloper.rsbi.databinding.WelcomePageCommunityBinding
-ro/rsbideveloper/rsbi/pages/Public_engagement_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Public_engagement_pageDirections
 ro/rsbideveloper/rsbi/databinding/EventsPageBinding.java
  ro.rsbideveloper.rsbi.databinding.EventsPageBinding
-ro/rsbideveloper/rsbi/pages/Events_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Events_pageDirections
- ro.rsbideveloper.rsbi.pages.Events_pageDirections$1
- ro.rsbideveloper.rsbi.pages.Events_pageDirections$ActionEventsPageNavToWriteEventPageNav
+ro/rsbideveloper/rsbi/databinding/SqliteListItemBinding.java
+ ro.rsbideveloper.rsbi.databinding.SqliteListItemBinding
 ro/rsbideveloper/rsbi/databinding/WorkPageBinding.java
  ro.rsbideveloper.rsbi.databinding.WorkPageBinding
 ro/rsbideveloper/rsbi/databinding/ArticleEventListFormBinding.java
  ro.rsbideveloper.rsbi.databinding.ArticleEventListFormBinding
-ro/rsbideveloper/rsbi/dialogs/WriteEvent_formArgs.java
- ro.rsbideveloper.rsbi.dialogs.WriteEvent_formArgs
- ro.rsbideveloper.rsbi.dialogs.WriteEvent_formArgs$1
- ro.rsbideveloper.rsbi.dialogs.WriteEvent_formArgs$Builder
-ro/rsbideveloper/rsbi/pages/Study_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Study_pageDirections
-ro/rsbideveloper/rsbi/dialogs/WriteEvent_formDirections.java
- ro.rsbideveloper.rsbi.dialogs.WriteEvent_formDirections
-ro/rsbideveloper/rsbi/pages/Bioinformatics_in_Romania_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Bioinformatics_in_Romania_pageDirections
 ro/rsbideveloper/rsbi/databinding/WebViewRsbiBinding.java
  ro.rsbideveloper.rsbi.databinding.WebViewRsbiBinding
-ro/rsbideveloper/rsbi/databinding/ArticleEventDetailedFormBinding.java
- ro.rsbideveloper.rsbi.databinding.ArticleEventDetailedFormBinding
 ro/rsbideveloper/rsbi/data/event/EventDatabase_Impl.java
  ro.rsbideveloper.rsbi.data.event.EventDatabase_Impl
  ro.rsbideveloper.rsbi.data.event.EventDatabase_Impl$1
-ro/rsbideveloper/rsbi/pages/Blog_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Blog_pageDirections
 ro/rsbideveloper/rsbi/data/pageHTML/PageHTMLDatabase_Impl.java
  ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLDatabase_Impl
  ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLDatabase_Impl$1
-ro/rsbideveloper/rsbi/pages/About_us_pageDirections.java
- ro.rsbideveloper.rsbi.pages.About_us_pageDirections
 ro/rsbideveloper/rsbi/data/event/EventDao_Impl.java
  ro.rsbideveloper.rsbi.data.event.EventDao_Impl
  ro.rsbideveloper.rsbi.data.event.EventDao_Impl$1
@@ -64,6 +53,8 @@ ro/rsbideveloper/rsbi/data/event/EventDao_Impl.java
  ro.rsbideveloper.rsbi.data.event.EventDao_Impl$3
  ro.rsbideveloper.rsbi.data.event.EventDao_Impl$4
  ro.rsbideveloper.rsbi.data.event.EventDao_Impl$5
+ro/rsbideveloper/rsbi/ui/entrypointAnonymousUser/AnonymousUserNavViewArticleListDirections.java
+ ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserNavViewArticleListDirections
 ro/rsbideveloper/rsbi/databinding/WelcomePageElixirBinding.java
  ro.rsbideveloper.rsbi.databinding.WelcomePageElixirBinding
 ro/rsbideveloper/rsbi/databinding/WelcomePageRsbiBinding.java
@@ -74,7 +65,6 @@ ro/rsbideveloper/rsbi/BuildConfig.java
  ro.rsbideveloper.rsbi.BuildConfig
 ro/rsbideveloper/rsbi/databinding/WriteEventDialogBinding.java
  ro.rsbideveloper.rsbi.databinding.WriteEventDialogBinding
-ro/rsbideveloper/rsbi/SplashscreenDirections.java
- ro.rsbideveloper.rsbi.SplashscreenDirections
-ro/rsbideveloper/rsbi/pages/Work_pageDirections.java
- ro.rsbideveloper.rsbi.pages.Work_pageDirections
+ro/rsbideveloper/rsbi/data/article/ArticleDatabase_Impl.java
+ ro.rsbideveloper.rsbi.data.article.ArticleDatabase_Impl
+ ro.rsbideveloper.rsbi.data.article.ArticleDatabase_Impl$1

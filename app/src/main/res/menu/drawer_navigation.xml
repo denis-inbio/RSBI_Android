@@ -1,78 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@id/Home_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Homepage"/>
-    <item
-        android:id="@id/Events_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Events"/>
-    <item
-        android:id="@id/Work_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Work"/>
-    <item
-        android:id="@id/Public_engagement_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Public engagement"/>
-    <item
-        android:id="@id/Essential_skills_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Essential skills"/>
-    <item
-        android:id="@id/Bioinformatics_in_Romania_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Bioinformatics in Romania"/>
-    <item
-        android:id="@id/About_us_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="About us"/>
-    <item
-        android:id="@id/Blog_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Blog"/>
-    <item
-        android:id="@id/Contact_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Contact"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Study"/>
-
-
-
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Gather funding, Transparent funding report / status (!), Crowdfunding (!); make it easy for people to support you financially"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Elixir platform"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Elixir job vaccancies"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="RSBI for developers (+ Elixir); APIs, Data federation / interoperability, infrastructure / servers / node.js clusters and scaling, etc."/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Elixir Training (+ Webinars)"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="Planned infrastructure projects"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="The state of the Romanian Elixir Node"/>
-    <item
-        android:id="@id/Study_page_Nav"
-        android:icon="@drawable/ic_baseline_rss_feed_24"
-        android:title="pending"/>
 </menu>
+
+    <!--    <item-->
+<!--        android:id="@id/Home_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Homepage"/>-->
+<!--    <item-->
+<!--        android:id="@id/Events_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Events"/>-->
+<!--    <item-->
+<!--        android:id="@id/Work_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Work"/>-->
+<!--    <item-->
+<!--        android:id="@id/Public_engagement_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Public engagement"/>-->
+<!--    <item-->
+<!--        android:id="@id/Essential_skills_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Essential skills"/>-->
+<!--    <item-->
+<!--        android:id="@id/Bioinformatics_in_Romania_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Bioinformatics in Romania"/>-->
+<!--    <item-->
+<!--        android:id="@id/About_us_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="About us"/>-->
+<!--    <item-->
+<!--        android:id="@id/Blog_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Blog"/>-->
+<!--    <item-->
+<!--        android:id="@id/Contact_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Contact"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Study"/>-->
+
+
+
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Gather funding, Transparent funding report / status (!), Crowdfunding (!); make it easy for people to support you financially"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Elixir platform"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Elixir job vaccancies"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="RSBI for developers (+ Elixir); APIs, Data federation / interoperability, infrastructure / servers / node.js clusters and scaling, etc."/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Elixir Training (+ Webinars)"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="Planned infrastructure projects"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="The state of the Romanian Elixir Node"/>-->
+<!--    <item-->
+<!--        android:id="@id/Study_page_Nav"-->
+<!--        android:icon="@drawable/ic_baseline_rss_feed_24"-->
+<!--        android:title="pending"/>-->
+<!--</menu>-->

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.databinding:viewbinding:4.2.2] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fdff67555afa5f3b030fbe3d5a53cd2f\viewbinding-4.2.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-dynamic-features-fragment:2.3.5] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\84ff2483829b1860a07aa0a1b91ab548\navigation-dynamic-features-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\168d05687162bb61ba6e79e245507120\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -85,20 +85,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\7fe639974185911418b7701b99df2db4\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\b174bf562e3ad8fa634c717d6414ed66\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
 	package
 		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:4:5-36
 		INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:2:1-52:12
 		INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:3:5-63
@@ -111,7 +111,7 @@ ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:10:5-46:19
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:10:5-50:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\efb288259e562304ef1ee5a5326dff47\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\efb288259e562304ef1ee5a5326dff47\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\9837b66af926d07fd25789f35c306675\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -168,24 +168,28 @@ ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xm
 		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:32:13-58
 	android:name
 		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:30:13-41
-activity#ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUser
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:5-43:16
+activity#ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserPerspective
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:5-39:16
 	android:name
-		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:15-71
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:39:9-42:25
-action#android.intent.action.MAIN
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:13-65
-	android:name
-		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:21-62
-category#android.intent.category.LAUNCHER
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:41:13-73
-	android:name
-		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:41:23-70
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:15-82
 activity#ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome
-ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:44:5-71
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:5-41:16
 	android:name
-		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:44:15-59
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:15-59
+activity#ro.rsbideveloper.rsbi.ui.SQLiteMain
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:43:5-48:16
+	android:name
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:43:15-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:44:9-47:25
+action#android.intent.action.MAIN
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:45:13-65
+	android:name
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:45:21-62
+category#android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:46:13-73
+	android:name
+		ADDED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:46:23-70
 uses-sdk
 INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml

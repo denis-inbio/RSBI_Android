@@ -221,7 +221,7 @@ class MainActivity : AppCompatActivity() {
         // Blog
         // Job offers
 
-        val URLs = resources.getStringArray(R.array.feed_URLs)
+        val URLs = resources.getStringArray(R.array.articles_urls)
 
 //        <string-array name="events_or_feed">
 //        <item>https://www.rsbi.ro/category/rsbi-events/</item>

@@ -29,6 +29,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <AutoCompleteTextView
+            android:id="@+id/ArticleEventList_root_inputLayout_autocompleteEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AutoCompleteTextView" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <ScrollView
@@ -56,41 +63,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <TextView
-                android:id="@+id/ArticleEventList_root_scrollView_linearLayout_tv1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/ArticleEventList_root_scrollView_linearLayout_tv2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/ArticleEventList_root_scrollView_linearLayout_tv3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <Button
-                android:id="@+id/ArticleEventList_root_scrollView_linearLayout_btn1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Change live state 1" />
-
-            <Button
-                android:id="@+id/ArticleEventList_root_scrollView_linearLayout_btn2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Change live state 2" />
-
-            <Button
-                android:id="@+id/ArticleEventList_root_scrollView_linearLayout_btn3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Change live state 3" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,14 +40,17 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.RSBI.NoActionBar" >
         </activity>
-        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUser" >
+        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserPerspective" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.ui.SQLiteMain" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

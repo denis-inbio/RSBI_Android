@@ -35,13 +35,17 @@
 
         </activity>
 
-    <activity android:name=".ui.entrypointAnonymousUser.AnonymousUser">
+    <activity android:name=".ui.entrypointAnonymousUser.AnonymousUserPerspective">
+    </activity>
+    <activity android:name=".ui.entrypointWelcome.Welcome">
+    </activity>
+
+    <activity android:name=".ui.SQLiteMain">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".ui.entrypointWelcome.Welcome"></activity>
 
     </application>
 

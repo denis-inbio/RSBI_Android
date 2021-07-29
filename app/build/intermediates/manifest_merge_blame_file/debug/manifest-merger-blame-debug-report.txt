@@ -23,7 +23,7 @@
 16-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:8:3-74
 16-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:8:20-72
 17    <application
-17-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:10:5-46:19
+17-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:10:5-50:19
 18        android:allowBackup="true"
 18-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:11:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -66,123 +66,128 @@
 41            android:theme="@style/Theme.RSBI.NoActionBar" >
 41-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:32:13-58
 42        </activity>
-43        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUser" >
-43-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:5-43:16
-43-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:15-71
-44            <intent-filter>
-44-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:39:9-42:25
-45                <action android:name="android.intent.action.MAIN" />
-45-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:13-65
-45-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:21-62
-46
-47                <category android:name="android.intent.category.LAUNCHER" />
-47-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:41:13-73
-47-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:41:23-70
-48            </intent-filter>
-49        </activity>
-50        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome" />
-50-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:44:5-71
-50-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:44:15-59
-51
-52        <service
-52-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
-53            android:name="androidx.room.MultiInstanceInvalidationService"
-53-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
-54            android:directBootAware="true"
-54-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
-55            android:exported="false" />
-55-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
-56
-57        <provider
-57-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:26:9-34:20
-58            android:name="androidx.startup.InitializationProvider"
-58-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:27:13-67
-59            android:authorities="ro.rsbideveloper.rsbi.androidx-startup"
-59-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:28:13-68
-60            android:exported="false" >
-60-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:29:13-37
-61            <meta-data
-61-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:31:13-33:52
-62                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-62-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:32:17-78
-63                android:value="androidx.startup" />
-63-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:33:17-49
+43        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserPerspective" >
+43-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:5-39:16
+43-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:38:15-82
+44        </activity>
+45        <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome" >
+45-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:5-41:16
+45-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:40:15-59
+46        </activity>
+47        <activity android:name="ro.rsbideveloper.rsbi.ui.SQLiteMain" >
+47-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:43:5-48:16
+47-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:43:15-44
+48            <intent-filter>
+48-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:44:9-47:25
+49                <action android:name="android.intent.action.MAIN" />
+49-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:45:13-65
+49-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:45:21-62
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:46:13-73
+51-->D:\AndroidStudioProjects\RSBI_Android\app\src\main\AndroidManifest.xml:46:23-70
+52            </intent-filter>
+53        </activity>
+54
+55        <service
+55-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+56            android:name="androidx.room.MultiInstanceInvalidationService"
+56-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+57            android:directBootAware="true"
+57-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+58            android:exported="false" />
+58-->[androidx.room:room-runtime:2.3.0] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\6c2ae1edabd63d2d0b4f5f81d74eb12e\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+59
+60        <provider
+60-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:26:9-34:20
+61            android:name="androidx.startup.InitializationProvider"
+61-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:27:13-67
+62            android:authorities="ro.rsbideveloper.rsbi.androidx-startup"
+62-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:28:13-68
+63            android:exported="false" >
+63-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:29:13-37
 64            <meta-data
-64-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:31:13-33:52
-65                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-65-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:32:17-85
+64-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:31:13-33:52
+65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+65-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:32:17-78
 66                android:value="androidx.startup" />
-66-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:33:17-49
-67        </provider>
-68
-69        <receiver
-69-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:36:9-45:20
-70            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-70-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:37:13-76
-71            android:directBootAware="false"
-71-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:38:13-44
-72            android:enabled="true"
-72-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:39:13-35
-73            android:exported="true"
-73-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:40:13-36
-74            android:permission="android.permission.DUMP" >
-74-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:41:13-57
-75            <intent-filter>
-75-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:42:13-44:29
-76                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-76-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:43:17-91
-76-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:43:25-88
-77            </intent-filter>
-78        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
-79        <activity
-79-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:5-271
-80            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-80-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:15-102
-81            android:enabled="false"
-81-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:103-126
-82            android:exported="false"
-82-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:127-151
-83            android:launchMode="singleInstance"
-83-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:204-239
-84            android:process=":playcore_missing_splits_activity"
-84-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:152-203
-85            android:stateNotNeeded="true" />
-85-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:240-269
-86        <activity
-86-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:5-226
-87            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-87-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:15-95
-88            android:enabled="false"
-88-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:96-119
-89            android:exported="false"
-89-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:120-144
-90            android:stateNotNeeded="true"
-90-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:145-174
-91            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
-91-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:175-224
-92        <service
-92-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:5-18:15
-93            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-93-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:14-95
-94            android:enabled="false"
-94-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:96-119
-95            android:exported="true" >
-95-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:120-143
-96            <meta-data
-96-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:17:7-108
-97                android:name="com.google.android.play.core.assetpacks.versionCode"
-97-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:17:18-84
-98                android:value="10901" />
-98-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:17:85-106
-99        </service>
-100        <service
-100-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:5-147
-101            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-101-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:14-96
-102            android:enabled="false"
-102-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:97-120
-103            android:exported="false" />
-103-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:121-145
-104    </application>
-105
-106</manifest>
+66-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\fcecca9e62d1d28c01a46c3294d69152\lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:33:17-49
+67            <meta-data
+67-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:31:13-33:52
+68                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+68-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:32:17-85
+69                android:value="androidx.startup" />
+69-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:33:17-49
+70        </provider>
+71
+72        <receiver
+72-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:36:9-45:20
+73            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+73-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:37:13-76
+74            android:directBootAware="false"
+74-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:38:13-44
+75            android:enabled="true"
+75-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:39:13-35
+76            android:exported="true"
+76-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:40:13-36
+77            android:permission="android.permission.DUMP" >
+77-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:41:13-57
+78            <intent-filter>
+78-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:42:13-44:29
+79                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+79-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:43:17-91
+79-->[androidx.profileinstaller:profileinstaller:1.0.0-rc01] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f673ff7f1289ff7178846408c1fe63a1\profileinstaller-1.0.0-rc01\AndroidManifest.xml:43:25-88
+80            </intent-filter>
+81        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+82        <activity
+82-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:5-271
+83            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+83-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:15-102
+84            android:enabled="false"
+84-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:103-126
+85            android:exported="false"
+85-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:127-151
+86            android:launchMode="singleInstance"
+86-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:204-239
+87            android:process=":playcore_missing_splits_activity"
+87-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:152-203
+88            android:stateNotNeeded="true" />
+88-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:12:240-269
+89        <activity
+89-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:5-226
+90            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+90-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:15-95
+91            android:enabled="false"
+91-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:96-119
+92            android:exported="false"
+92-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:120-144
+93            android:stateNotNeeded="true"
+93-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:145-174
+94            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+94-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:13:175-224
+95        <service
+95-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:5-18:15
+96            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+96-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:14-95
+97            android:enabled="false"
+97-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:96-119
+98            android:exported="true" >
+98-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:16:120-143
+99            <meta-data
+99-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:17:7-108
+100                android:name="com.google.android.play.core.assetpacks.versionCode"
+100-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:17:18-84
+101                android:value="10901" />
+101-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:17:85-106
+102        </service>
+103        <service
+103-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:5-147
+104            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+104-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:14-96
+105            android:enabled="false"
+105-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:97-120
+106            android:exported="false" />
+106-->[com.google.android.play:core:1.9.1] C:\Users\Laptop User\.gradle\caches\transforms-2\files-2.1\f39a975af971ec52d358aaa20484e126\core-1.9.1\AndroidManifest.xml:19:121-145
+107    </application>
+108
+109</manifest>
