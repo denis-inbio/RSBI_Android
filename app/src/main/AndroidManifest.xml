@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="ro.rsbideveloper.rsbi">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- so what permissions should be requested instead then ? -->
 
     <!-- TODO: android:allowBackup -> this affects what happens to the databases when uninstalling the app -->
     <application
@@ -39,13 +40,25 @@
     </activity>
     <activity android:name=".ui.entrypointWelcome.Welcome">
     </activity>
-
     <activity android:name=".ui.SQLiteMain">
+    </activity>
+    <activity android:name=".test.PhotoDisplay">
+    </activity>
+    <activity android:name=".test.CatFactActivity">
+    </activity>
+
+
+
+    <activity android:name=".test.CoroutinesTutorial">
+    </activity>
+    <activity android:name=".test.NetworkConnectivityMonitor">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+
+
 
     </application>
 

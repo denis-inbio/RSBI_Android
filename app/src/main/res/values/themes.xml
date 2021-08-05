@@ -12,14 +12,15 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!-- <TODO> I still do not know whether to have an action bar or not; either way, I would want to have it in specific cases,
+            but not in all; so maybe Jetpack Compose is more flexible with this (?!) -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.RSBI.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="Theme.RSBI.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.RSBI.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

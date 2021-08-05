@@ -2,18 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ro.rsbideveloper.rsbi"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="0.1.1" >
 
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="30" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- Permission will be merged into the manifest of the hosting app. -->
     <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- TODO: android:allowBackup -> this affects what happens to the databases when uninstalling the app -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- so what permissions should be requested instead then ? -->
+    <!-- TODO: android:allowBackup -> this affects what happens to the databases when uninstalling the app -->
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -22,7 +24,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.RSBI" >
         <service
             android:name="ro.rsbideveloper.rsbi.test.ServiceCom"
@@ -45,6 +46,14 @@
         <activity android:name="ro.rsbideveloper.rsbi.ui.entrypointWelcome.Welcome" >
         </activity>
         <activity android:name="ro.rsbideveloper.rsbi.ui.SQLiteMain" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.test.PhotoDisplay" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.test.CatFactActivity" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.test.CoroutinesTutorial" >
+        </activity>
+        <activity android:name="ro.rsbideveloper.rsbi.test.NetworkConnectivityMonitor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
