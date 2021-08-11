@@ -36,8 +36,10 @@
             <!-- intent-filter ? -->
         </receiver>
 
+        <!-- hardwareAccelerated, really ? -->
         <activity
             android:name="ro.rsbideveloper.rsbi.MainActivity"
+            android:hardwareAccelerated="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.RSBI.NoActionBar" >
             <intent-filter>

@@ -16,12 +16,12 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\generic_event.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\articles_search_list.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\articles_search_list.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\edit_dialog.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\edit_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\articles_search_list.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\articles_search_list.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_event_detailed_webview.xml",

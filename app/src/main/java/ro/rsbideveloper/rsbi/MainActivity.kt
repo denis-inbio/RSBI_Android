@@ -129,7 +129,9 @@ import ro.rsbideveloper.rsbi.test.*
     //            val notificationManager = getSystemService(NotificationManager::class.java)
     //        }
     //    }
-// <TODO>
+// <TODO> check if the registration link has a particular structure, so it could be extracted and presented directly into the
+    // RecyclerView for faster access; then add markers for events that the app knows it is registered for; also add markers
+    // for events that the app knows it has an alarm for
 
 class MainActivity : AppCompatActivity() {
 

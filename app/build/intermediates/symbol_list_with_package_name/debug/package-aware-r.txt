@@ -1753,6 +1753,8 @@ drawable gradient_2
 drawable gradient_3
 drawable gradient_list
 drawable ic_baseline_add_24
+drawable ic_baseline_alarm_add_24
+drawable ic_baseline_alarm_on_24
 drawable ic_baseline_alternate_email_24
 drawable ic_baseline_article_24
 drawable ic_baseline_delete_24
@@ -1820,6 +1822,7 @@ id ArticleEventDetailedForm_root_constraint_title
 id ArticleEventDetailedWebView_root
 id ArticleEventDetailedWebView_root_webview
 id ArticleEventListForm_root
+id ArticleEventListForm_rootCardView
 id ArticleEventListForm_root_author
 id ArticleEventListForm_root_category
 id ArticleEventListForm_root_datetime
@@ -1993,6 +1996,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -2101,6 +2105,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton
 id imageView
 id imageView2
 id imageView3

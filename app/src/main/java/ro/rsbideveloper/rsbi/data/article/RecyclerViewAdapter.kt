@@ -57,7 +57,7 @@ class RecyclerViewAdapter(
 
             holder.ArticleEventListForm_root_title.text = list[position]?.title
             holder.ArticleEventListForm_root_author.text = "Authored by ${list[position]?.author}"
-            holder.ArticleEventListForm_root_datetime.text = "Published on\n${list[position]?.creationTime}"
+            holder.ArticleEventListForm_root_datetime.text = "Published on\n${extractDate(list[position]?.creationTime)}"
             // last modified on ..?
 
             if(list[position]?.imgURL?.isNotEmpty() == true) {
@@ -136,6 +136,25 @@ class RecyclerViewAdapter(
 
     override fun getItemCount(): Int {
         return this.list.size
+    }
+
+    private fun extractDate(datetimeGMT: String?): String {
+        return if(datetimeGMT != null)
+            datetimeGMT.substring(0, 10) // inclusive: 9, exclusive: 10
+        else
+            ""
+    }
+    private fun extractTime(datetimeGMT: String?): String {
+        return if(datetimeGMT != null)
+            datetimeGMT.substring(11, 19) // inclusive: 9, exclusive: 10
+        else
+            ""
+    }
+    private fun extractGMT(datetimeGMT: String?): String {
+        return if(datetimeGMT != null)
+            datetimeGMT.substring(23, 29) // inclusive: 9, exclusive: 10
+        else
+            ""
     }
 }
 

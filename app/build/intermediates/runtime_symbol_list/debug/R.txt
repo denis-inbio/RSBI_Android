@@ -1752,6 +1752,8 @@ int drawable gradient_2 0x7f080066
 int drawable gradient_3 0x7f080067
 int drawable gradient_list 0x7f080068
 int drawable ic_baseline_add_24 0x7f080069
+int drawable ic_baseline_alarm_add_24 0x7f08009f
+int drawable ic_baseline_alarm_on_24 0x7f0800a0
 int drawable ic_baseline_alternate_email_24 0x7f08006a
 int drawable ic_baseline_article_24 0x7f08006b
 int drawable ic_baseline_delete_24 0x7f08006c
@@ -1819,6 +1821,7 @@ int id ArticleEventDetailedForm_root_constraint_title 0x7f09000a
 int id ArticleEventDetailedWebView_root 0x7f09000b
 int id ArticleEventDetailedWebView_root_webview 0x7f09000c
 int id ArticleEventListForm_root 0x7f09000d
+int id ArticleEventListForm_rootCardView 0x7f090236
 int id ArticleEventListForm_root_author 0x7f09000e
 int id ArticleEventListForm_root_category 0x7f090235
 int id ArticleEventListForm_root_datetime 0x7f09000f
@@ -1992,6 +1995,7 @@ int id beginning 0x7f0900b6
 int id blocking 0x7f0900b7
 int id bottom 0x7f0900b8
 int id bounce 0x7f0900b9
+int id button 0x7f090237
 int id buttonPanel 0x7f0900ba
 int id cache_measures 0x7f0900bb
 int id cancel_button 0x7f0900bc
@@ -2100,6 +2104,7 @@ int id ifRoom 0x7f090122
 int id ignore 0x7f090123
 int id ignoreRequest 0x7f090124
 int id image 0x7f090125
+int id imageButton 0x7f090238
 int id imageView 0x7f090126
 int id imageView2 0x7f090127
 int id imageView3 0x7f090128

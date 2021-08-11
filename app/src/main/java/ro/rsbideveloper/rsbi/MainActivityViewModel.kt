@@ -3,7 +3,6 @@ package ro.rsbideveloper.rsbi
 import android.app.Application
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.storage.StorageManager
 import android.os.storage.StorageManager.ACTION_CLEAR_APP_CACHE
@@ -78,10 +77,11 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
     fun listAllDetailedURLs(): List<String> {
         val urls: MutableList<String> = mutableListOf()
-        Log.d("SYNCHRONIZE", "")
+        Log.d("SYNCHRONIZE", "Logging listAllDetailedURLs(): start enumerating list")
         for(article in databaseDao.selectAll()) {
             article?.let {
                 urls.add(it.detailedArticleURL)
+                Log.d("SYNCHRONIZE", "Logging listAllDetailedURLs(): added article ${it.detailedArticleURL}")
             }
         }
 
@@ -103,7 +103,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
             for(file in filesDir.listFiles()) {
                 Log.d("SYNCHRONIZE", "Logging listAllCachedFiles():" +
                         "\n-> {filename: ${file.name}\nabsolute path: ${file.absolutePath}\ncanonical path: ${file.canonicalPath}" +
-                        "\nURI.toASCII: ${file.toURI().toASCIIString()}\nURI.toURL: ${file.toURI().toURL()}}")
+                        "\nURI: ${file.toURI()}\nURI.toASCII: ${file.toURI().toASCIIString()}\nURI.toURL: ${file.toURI().toURL()}}")
 
                 Uris.add(file.toURI())
             }
@@ -115,18 +115,42 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
         }
     }
 
-    fun selectCachedURL(url: String): URI? {
-        val file = File(hashFilenameFromURL(url))
-        return if(file.exists()) {
-            Log.d("SYNCHRONIZE", "Logging selectCachedURL(): found file $url")
-            file.toURI()
-        } else {
-            Log.d("SYNCHRONIZE", "Logging selectCachedURL(): could not find file $url")
-            null
+    // <TODO> this is problematic because of the convention for URL that WebView expects and I have no
+        //  way of knowing what it is, and I won't search for it. I am tired of this shit
+    fun getURLOfCachedFileByArticleUrl(url: String): String {
+        val filename = hashFilenameFromURL(url)
+
+        return try {
+            val file = File(filesDir, "$filename.html")
+            file.toURI().toURL().toString()
+        } catch(e: Exception) {
+            Log.d("SYNCHRONIZE", "Logging selectCachedURL(): could not find file $filename")
+            ""
         }
     }
 
+    fun getHTMLOfCachedFileByArticleUrl(url: String): String {
+        val filename = hashFilenameFromURL(url)
 
+        return try {
+            val codeHTMLBuilder = java.lang.StringBuilder()
+
+            // <TODO> this depends on the modification of manually appending the .html file format
+            val file = File(filesDir, "$filename.html")
+            val lines = file.readLines()
+
+            Log.d("SYNCHRONIZE", "Logging getHTMLOfCachedFileByArticleUrl(): reading line by line ->")
+            lines.forEach { line ->
+                codeHTMLBuilder.append(line)
+                Log.d("SYNCHRONIZE", line)
+            }
+
+            codeHTMLBuilder.toString()
+        } catch(e: Exception) {
+            Log.d("SYNCHRONIZE", "Logging selectCachedURL(): could not find file $filename")
+            ""
+        }
+    }
 
     private fun allocateCacheSpace() {
         try {
@@ -183,7 +207,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
     fun initialSynchronization() {
         if(!initialSynchronizationOccured) {
             // <TODO> list all files; URI or URL ?
-            listAllCachedFiles()
+//            listAllCachedFiles()
 
             // <TODO> how to check for already allocated cache space ?
             allocateCacheSpace()
@@ -201,8 +225,6 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
                         parseHTML(html, url)
                     }
                 }
-
-                listAllDetailedURLs()
             } catch(e: Exception) {
                 Log.d("SYNCHRONIZE", "Exception synchronizeArticles(): ${e.message}")
             }
@@ -295,33 +317,28 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
 
 
-                // <TODO> download the detailed article's HTML as well, cache it, such that the WebView can render it from offline files
-                Log.d("SYNCHRONIZE", "Logging parseHTML(): cache free space ${cacheDir.freeSpace}")
+                val articleCodeHTML = download(extractedArticle.detailedArticleURL)
+                if(articleCodeHTML != null) {
 
+                    val filename = hashFilenameFromURL(extractedArticle.detailedArticleURL)
+                    Log.d("SYNCHRONIZE", "Logging onParseHTML(): obtained filename hash $filename")
 
+                    // <TODO> memory space, total file size, query available
+                    val overhead = 1024
+                    val requiredSpace = articleCodeHTML.toByteArray().size + overhead  // TODO how much is the "file overhead" actually
+                    Log.d("SYNCHRONIZE", "Logging parseHTML(): required space $requiredSpace bytes")
+                    totalCacheSize += requiredSpace
+                    Log.d("SYNCHRONIZE", "Logging parseHTML(): total cache size $totalCacheSize bytes")
 
-                val hashFilename = hashFilenameFromURL(extractedArticle.detailedArticleURL)
-                Log.d("SYNCHRONIZE", "Logging onParseHTML(): obtained filename hash $hashFilename")
-
-                val overhead = 1024
-                val requiredSpace = codeHTML.toByteArray().size + overhead  // TODO how much is the "file overhead" actually
-                Log.d("SYNCHRONIZE", "Logging parseHTML(): required space $requiredSpace bytes")
-                totalCacheSize += requiredSpace
-                Log.d("SYNCHRONIZE", "Logging parseHTML(): total cache size $totalCacheSize bytes")
-
-
-                // <TODO> free-space query internal cache
-                // <TODO> ensure that any older file version gets overwritten
-                if(cacheDir.freeSpace > requiredSpace) {
-                    val cacheFile = baseContext.openFileOutput(hashFilename, Context.MODE_PRIVATE).use { file ->
-                        file.write(codeHTML.toByteArray())
+                    if (cacheDir.freeSpace > requiredSpace) {
+                        val cacheFile = baseContext
+                            .openFileOutput("$filename.html", Context.MODE_PRIVATE).use { file ->
+                                file.write(articleCodeHTML.toByteArray())
+                            }
+                    } else {
+                        // <TODO> not enough space - internal memory
                     }
-
-//                    val cachedFile = File(cacheDir, hashFilename) // the internal space can be freed by OS when low; check for files before using them
                 }
-
-                // <TODO> list all files; URI or URL ?
-                listAllCachedFiles()
             }
 
 
