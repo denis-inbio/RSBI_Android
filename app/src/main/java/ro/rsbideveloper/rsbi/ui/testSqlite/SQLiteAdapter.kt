@@ -1,4 +1,4 @@
-package ro.rsbideveloper.rsbi.ui
+package ro.rsbideveloper.rsbi.ui.testSqlite
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -16,8 +16,16 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\generic_event.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\articles_search_list.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\articles_search_list.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\edit_dialog.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\edit_dialog.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_event_detailed_webview.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_detailed_webview.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\photo_display.xml",
@@ -28,8 +36,8 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\network_connectivity_activity.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_event_list.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_list.xml"
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_with_image.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_with_image.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nested_recycler_view_layout_2.xml",
@@ -38,6 +46,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\welcome_page_community.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\welcome_page_community.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_without_image.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_without_image.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nested_recycler_views_activity.xml",
@@ -60,24 +72,28 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\sqlite_list_item.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\work_page.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\work_page.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\events_page.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\events_page.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\work_page.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\work_page.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_event_detailed_article_form.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_detailed_article_form.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\web_view_rsbi.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\web_view_rsbi.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\welcome_page_rsbi.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\welcome_page_rsbi.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\web_view_rsbi.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\web_view_rsbi.xml"
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\articles_list.xml",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\articles_list.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\sqlite_main.xml",
@@ -90,9 +106,5 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\article_event_list_form.xml",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_list_form.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\anonymous_user_perspective.xml",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\anonymous_user_perspective.xml"
     }
 ]

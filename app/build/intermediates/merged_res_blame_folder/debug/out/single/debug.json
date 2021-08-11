@@ -28,6 +28,10 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\write_event_dialog.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\navigation_main_activity_nav_graph.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\navigation\\main_activity_nav_graph.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_event_detailed_article_form.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_detailed_article_form.xml"
     },
@@ -72,12 +76,20 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_event_detailed_webview.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_detailed_webview.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete_24.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_delete_24.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_1.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\gradient_1.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_articles_list.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\articles_list.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\xml_motion_layout_page_scene.xml.flat",
@@ -92,8 +104,16 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_with_image.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_with_image.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_sqlite_list_item.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\sqlite_list_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_articles_search_list.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\articles_search_list.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_24.xml.flat",
@@ -102,6 +122,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_without_image.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_without_image.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_home_24.xml.flat",
@@ -140,14 +164,6 @@
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_warning_24.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\navigation\\nav_graph.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_anonymous_user_perspective.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\anonymous_user_perspective.xml"
-    },
-    {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
@@ -158,10 +174,6 @@
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_24.xml.flat",
         "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_article_event_list.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\src\\main\\res\\layout\\article_event_list.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\RSBI_Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_edit_24.xml.flat",

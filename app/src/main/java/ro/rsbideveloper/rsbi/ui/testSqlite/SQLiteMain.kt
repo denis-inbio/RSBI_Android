@@ -1,4 +1,4 @@
-package ro.rsbideveloper.rsbi.ui
+package ro.rsbideveloper.rsbi.ui.testSqlite
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,6 @@ import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import ro.rsbideveloper.rsbi.R
@@ -74,7 +73,8 @@ class SQLiteMain : AppCompatActivity() {
                         val result = SQLiteDatabaseHandler(this)
                             .update(
                                 SQLiteDatabaseHandler.TABLE_DATA1,
-                                SQLiteDataClass(data.id, name.toString(), email.toString()))
+                                SQLiteDataClass(data.id, name.toString(), email.toString())
+                            )
 
                         if(result > -1) {
                             // <TODO> synchronize the recycler view
@@ -131,7 +131,8 @@ class SQLiteMain : AppCompatActivity() {
 //                database.selectAll(SQLiteDatabaseHandler.TABLE_DATA1))
 //            it.layoutManager = LinearLayoutManager(this)
 
-            it.adapter = SQLiteAdapter(this, SQLiteDatabaseHandler(this).selectAll(SQLiteDatabaseHandler.TABLE_DATA1))
+            it.adapter = SQLiteAdapter(this, SQLiteDatabaseHandler(this).selectAll(
+                SQLiteDatabaseHandler.TABLE_DATA1))
 
 //            database.flush()  // <TODO> is there something like this ? is the insert() asynchronous or synchronous ?
 

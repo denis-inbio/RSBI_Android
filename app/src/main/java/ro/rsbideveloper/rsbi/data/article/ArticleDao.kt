@@ -11,10 +11,17 @@ interface ArticleDao {
     @Update
     suspend fun update(article: Article)
 
-    @Query("SELECT * FROM article_table ORDER BY detailedArticleURL ASC")   // ORDER BY creationTime DESC; could it be that the primary key has an index and the other things do not have an index yet ?
-    fun selectAll(): LiveData<List<Article>>
+//     <TODO> WARNING: do not use this during ViewModel's initialization, as it will crash the app
+    @Query("SELECT * FROM article_table ORDER BY creationTime DESC")
+    fun selectAll(): List<Article?>
 
-    // <TODO> keeps complaining that it doesn't know how to implement / "inject" this
-//    @Query("SELECT * FROM event_table WHERE id= :selectId")
-//    fun selectById(selectId: Int): LiveData<Article>
+    @Query("SELECT * FROM article_table ORDER BY creationTime DESC")
+    fun selectAllLiveData(): LiveData<List<Article?>>
+
+    // <TODO> for some reason though, when this method is called, it seems to be fine (?)
+    @Query("SELECT * FROM article_table WHERE detailedArticleURL = :detailedArticleURL")
+    fun selectById(detailedArticleURL: String): Article?
+
+    @Query("SELECT * FROM article_table WHERE detailedArticleURL = :detailedArticleURL")
+    fun selectByIdLiveData(detailedArticleURL: String): LiveData<Article?>
 }

@@ -1,40 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/ArticleEventListForm_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.entrypointAnonymousUser.AnonymousUserNavViewArticleList">
+    tools:context=".ui.article.SearchList">
 
     <ImageView
         android:id="@+id/ArticleEventListForm_root_featuredImage"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ArticleEventListForm_root_author"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/ArticleEventListForm_root_title"
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="45dp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="Title"
-        app:layout_constraintBottom_toTopOf="@+id/ArticleEventListForm_root_datetime"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ArticleEventListForm_root_featuredImage"
-        app:layout_constraintTop_toTopOf="@+id/ArticleEventListForm_root_featuredImage" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ArticleEventListForm_root_category" />
+
+    <TextView
+        android:id="@+id/ArticleEventListForm_root_author"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Author"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ArticleEventListForm_root_title" />
+
+    <TextView
+        android:id="@+id/ArticleEventListForm_root_category"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="8dp"
+        android:fontFamily=""
+        android:text="Category"
+        android:textColor="@color/defaultCategoryColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ArticleEventListForm_root_datetime"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+
         android:text="Datetime"
-        app:layout_constraintBottom_toBottomOf="@+id/ArticleEventListForm_root_featuredImage"
+        android:textSize="16sp"
+        android:textAlignment="textEnd"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ArticleEventListForm_root_title" />
+        app:layout_constraintTop_toBottomOf="@+id/ArticleEventListForm_root_featuredImage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articlesSearchList">
+    <fragment
+        android:id="@+id/articlesSearchList"
+        android:name="ro.rsbideveloper.rsbi.ui.article.SearchList"
+        android:label="ArticlesSearchList"
+        tools:layout="@layout/articles_search_list" >
+        <action
+            android:id="@+id/action_articlesSearchList_to_offlineDetailed"
+            app:destination="@id/offlineDetailed" />
+        <action
+            android:id="@+id/action_articlesSearchList_to_onlineDetailed"
+            app:destination="@id/onlineDetailed" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlineDetailed"
+        android:name="ro.rsbideveloper.rsbi.ui.article.OnlineDetailed"
+        android:label="OnlineDetailed" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/offlineDetailed"
+        android:name="ro.rsbideveloper.rsbi.ui.article.OfflineDetailed"
+        android:label="OfflineDetailed" >
+        <argument
+            android:name="primaryKey"
+            app:argType="string" />
+    </fragment>
+</navigation>

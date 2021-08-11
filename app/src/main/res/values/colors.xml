@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <array name="articleBackgroundColors">
+        <item>#E6E6E6</item>
+    </array>
+
+    <array name="categoryColors">
+        <item>#FFC8D515</item>
+        <item>#FFFABB15</item>
+        <item>#FF88EEFF</item>
+        <item>#FFA0A0A0</item>
+    </array>
+
+    <color name="defaultCategoryColor">#FFC8D515</color>
+    <color name="titleColor">#FFC8D515</color>
+    <color name="authorColor">#FFC8D515</color>
+    <color name="datetimeColor">#FFC8D515</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

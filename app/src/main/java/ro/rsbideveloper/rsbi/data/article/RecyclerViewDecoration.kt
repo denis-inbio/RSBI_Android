@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class ArticleRecyclerViewDecoration(
+class RecyclerViewDecoration(
     private val marginTop: Int
 ) : RecyclerView.ItemDecoration() {
 
@@ -17,4 +17,6 @@ class ArticleRecyclerViewDecoration(
         super.getItemOffsets(outRect, view, parent, state)
         outRect.top = marginTop
     }
+
+
 }

@@ -1,4 +1,4 @@
-package ro.rsbideveloper.rsbi.ui
+package ro.rsbideveloper.rsbi.ui.testSqlite
 
 import android.content.ContentValues
 import android.content.Context
@@ -85,7 +85,8 @@ class SQLiteDatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABA
                             cursor.getInt(cursor.getColumnIndex(TABLE_DATA1_KEY_ID)),
                             cursor.getString(cursor.getColumnIndex(TABLE_DATA1_KEY_NAME)),
                             cursor.getString(cursor.getColumnIndex(TABLE_DATA1_KEY_EMAIL))
-                        ))
+                        )
+                    )
 
                 } while (cursor.moveToNext())
 
@@ -121,7 +122,8 @@ class SQLiteDatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABA
                             cursor.getInt(cursor.getColumnIndex(TABLE_DATA1_KEY_ID)),
                             cursor.getString(cursor.getColumnIndex(TABLE_DATA1_KEY_NAME)),
                             cursor.getString(cursor.getColumnIndex(TABLE_DATA1_KEY_EMAIL))
-                    ))
+                    )
+                    )
 
                 } while (cursor.moveToNext())
 
