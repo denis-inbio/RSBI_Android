@@ -13,20 +13,23 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ArticlesSearchList_root_inputLayout"
 
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         app:endIconMode="clear_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ArticlesSearchList_root_btnFilter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@drawable/ic_baseline_search_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ArticlesSearchList_root_inputLayout_editText"
-            android:hint="Search for something"
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+
+            android:hint="Search for something"
+            android:imeOptions="actionDone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,5 +44,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ArticlesSearchList_root_inputLayout" />
+
+    <ImageButton
+        android:id="@+id/ArticlesSearchList_root_btnSync"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/ic_popup_sync"
+        app:layout_constraintBottom_toBottomOf="@+id/ArticlesSearchList_root_inputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ArticlesSearchList_root_inputLayout" />
+
+    <ImageButton
+        android:id="@+id/ArticlesSearchList_root_btnFilter"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_baseline_filter_list_24"
+        app:layout_constraintBottom_toBottomOf="@+id/ArticlesSearchList_root_inputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/ArticlesSearchList_root_btnSync"
+        app:layout_constraintTop_toTopOf="@+id/ArticlesSearchList_root_inputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

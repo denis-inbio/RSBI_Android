@@ -1759,6 +1759,7 @@ drawable ic_baseline_alternate_email_24
 drawable ic_baseline_article_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
+drawable ic_baseline_filter_list_24
 drawable ic_baseline_home_24
 drawable ic_baseline_perm_identity_24
 drawable ic_baseline_rss_feed_24
@@ -1823,10 +1824,12 @@ id ArticleEventDetailedWebView_root
 id ArticleEventDetailedWebView_root_webview
 id ArticleEventListForm_root
 id ArticleEventListForm_rootCardView
+id ArticleEventListForm_root_alarm
 id ArticleEventListForm_root_author
 id ArticleEventListForm_root_category
 id ArticleEventListForm_root_datetime
 id ArticleEventListForm_root_featuredImage
+id ArticleEventListForm_root_register
 id ArticleEventListForm_root_title
 id ArticlesList_root
 id ArticlesList_root_inputLayout
@@ -1836,6 +1839,8 @@ id ArticlesList_root_scrollView
 id ArticlesList_root_scrollView_linearLayout
 id ArticlesList_root_scrollView_linearLayout_recyclerView
 id ArticlesSearchList_root
+id ArticlesSearchList_root_btnFilter
+id ArticlesSearchList_root_btnSync
 id ArticlesSearchList_root_inputLayout
 id ArticlesSearchList_root_inputLayout_editText
 id ArticlesSearchList_root_recyclerView
@@ -1996,7 +2001,6 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -2093,6 +2097,7 @@ id grouping
 id groups
 id guideline
 id guideline2
+id guideline3
 id header_title
 id hide_in_inspector_tag
 id hideable
@@ -2105,7 +2110,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageButton
 id imageView
 id imageView2
 id imageView3

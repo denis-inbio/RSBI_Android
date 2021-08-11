@@ -1758,6 +1758,7 @@ int drawable ic_baseline_alternate_email_24 0x7f08006a
 int drawable ic_baseline_article_24 0x7f08006b
 int drawable ic_baseline_delete_24 0x7f08006c
 int drawable ic_baseline_edit_24 0x7f08006d
+int drawable ic_baseline_filter_list_24 0x7f0800a1
 int drawable ic_baseline_home_24 0x7f08006e
 int drawable ic_baseline_perm_identity_24 0x7f08006f
 int drawable ic_baseline_rss_feed_24 0x7f080070
@@ -1822,10 +1823,12 @@ int id ArticleEventDetailedWebView_root 0x7f09000b
 int id ArticleEventDetailedWebView_root_webview 0x7f09000c
 int id ArticleEventListForm_root 0x7f09000d
 int id ArticleEventListForm_rootCardView 0x7f090236
+int id ArticleEventListForm_root_alarm 0x7f09023b
 int id ArticleEventListForm_root_author 0x7f09000e
 int id ArticleEventListForm_root_category 0x7f090235
 int id ArticleEventListForm_root_datetime 0x7f09000f
 int id ArticleEventListForm_root_featuredImage 0x7f090010
+int id ArticleEventListForm_root_register 0x7f09023c
 int id ArticleEventListForm_root_title 0x7f090011
 int id ArticlesList_root 0x7f090012
 int id ArticlesList_root_inputLayout 0x7f090013
@@ -1835,6 +1838,8 @@ int id ArticlesList_root_scrollView 0x7f090016
 int id ArticlesList_root_scrollView_linearLayout 0x7f090017
 int id ArticlesList_root_scrollView_linearLayout_recyclerView 0x7f090018
 int id ArticlesSearchList_root 0x7f090019
+int id ArticlesSearchList_root_btnFilter 0x7f09023e
+int id ArticlesSearchList_root_btnSync 0x7f09023d
 int id ArticlesSearchList_root_inputLayout 0x7f09001a
 int id ArticlesSearchList_root_inputLayout_editText 0x7f09001b
 int id ArticlesSearchList_root_recyclerView 0x7f09001c
@@ -1995,7 +2000,6 @@ int id beginning 0x7f0900b6
 int id blocking 0x7f0900b7
 int id bottom 0x7f0900b8
 int id bounce 0x7f0900b9
-int id button 0x7f090237
 int id buttonPanel 0x7f0900ba
 int id cache_measures 0x7f0900bb
 int id cancel_button 0x7f0900bc
@@ -2092,6 +2096,7 @@ int id grouping 0x7f090116
 int id groups 0x7f090117
 int id guideline 0x7f090118
 int id guideline2 0x7f090119
+int id guideline3 0x7f090239
 int id header_title 0x7f09011a
 int id hide_in_inspector_tag 0x7f09011b
 int id hideable 0x7f09011c
@@ -2104,7 +2109,6 @@ int id ifRoom 0x7f090122
 int id ignore 0x7f090123
 int id ignoreRequest 0x7f090124
 int id image 0x7f090125
-int id imageButton 0x7f090238
 int id imageView 0x7f090126
 int id imageView2 0x7f090127
 int id imageView3 0x7f090128

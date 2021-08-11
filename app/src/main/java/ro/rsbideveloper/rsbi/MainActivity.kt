@@ -132,6 +132,14 @@ import ro.rsbideveloper.rsbi.test.*
 // <TODO> check if the registration link has a particular structure, so it could be extracted and presented directly into the
     // RecyclerView for faster access; then add markers for events that the app knows it is registered for; also add markers
     // for events that the app knows it has an alarm for
+// <TODO> hide the Register and Alarm buttons in those articles that are not actually "events"
+// <TODO> set maximum number of lines on title TextView: articles: 3 lines, others without author: maybe 4-5
+// <TODO> in the offline mode of the WebView, can the errors of things which couldn't be loaded be hidden ?
+// <TODO> for setting the alarm for an event, I think that just a few of the events will be able to have automatic alarms (if any...),
+    // so there should be an indication ~ "alarm Auto" and "alarm Manual"; besides, note that any event should be able to
+    // have multiple alarms (!)
+// <TODO>
+
 
 class MainActivity : AppCompatActivity() {
 

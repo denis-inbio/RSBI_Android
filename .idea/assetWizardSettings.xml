@@ -307,7 +307,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/C:/Users/Laptop%20User/AppData/Local/Android/Sdk/icons/material/materialicons/alarm_on/baseline_alarm_on_24.xml" />
+                                      <entry key="url" value="file:/C:/Users/Laptop%20User/AppData/Local/Android/Sdk/icons/material/materialicons/filter_list/baseline_filter_list_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -317,7 +317,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_alarm_on_24" />
+                            <entry key="outputName" value="ic_baseline_filter_list_24" />
                             <entry key="sourceFile" value="D:\AndroidStudioProjects\RSBI_Android" />
                           </map>
                         </option>

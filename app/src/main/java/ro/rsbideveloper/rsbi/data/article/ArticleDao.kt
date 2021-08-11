@@ -24,4 +24,23 @@ interface ArticleDao {
 
     @Query("SELECT * FROM article_table WHERE detailedArticleURL = :detailedArticleURL")
     fun selectByIdLiveData(detailedArticleURL: String): LiveData<Article?>
+
+
+    /// For flexible Queries
+
+    @Query("SELECT * FROM article_table WHERE category LIKE :category")
+    fun selectByCategoryLiveData(category: String): LiveData<List<Article?>>
+
+    @Query("SELECT * FROM article_table WHERE title LIKE :title")
+    fun selectByTitleLiveData(title: String): LiveData<List<Article?>>
+
+    @Query("SELECT * FROM article_table WHERE author LIKE :author")
+    fun selectByAuthorLiveData(author: String): LiveData<List<Article?>>
+
+    @Query("SELECT * FROM article_table WHERE creationTime LIKE :creationTime")
+    fun selectByDatetimeLiveData(creationTime: String): LiveData<List<Article?>>
+
+    @Query("SELECT * FROM article_table WHERE LOWER(category) LIKE LOWER(:query) OR LOWER(title) LIKE LOWER(:query) OR LOWER(author) LIKE LOWER(:query) OR LOWER(creationTime) LIKE LOWER(:query)")
+    fun selectByCategoryOrTitleOrAuthorOrDatetimeLiveData(query: String): LiveData<List<Article?>>
+
 }

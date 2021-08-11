@@ -39,35 +39,88 @@ import java.util.*
 
 
 class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
+    /// Essentials
+    private val database: ArticleDatabase = ArticleDatabase.getDatabase(application)
+    private val databaseDao: ArticleDao = database.getDao()
+
+
+    val liveArticles: LiveData<List<Article?>> = databaseDao.selectAllLiveData()
+    var queryLiveData: LiveData<List<Article?>>? = null
+    private val staticUrlsArticles: List<String> = application.resources.getStringArray(R.array.articles_urls).toList()
+    // other data class and its static urls
+
+
+    // <TODO> ?
     companion object {
         var totalCacheSize = 0
     }
 
+
+    /// accessing
     private val resources = application.resources
     private val cacheDir = application.cacheDir
     private val externalCacheDir = application.externalCacheDir
     private val filesDir = application.filesDir
+
+    // <TODO> what to do about this ?
     private val baseContext = application.baseContext
     private val applicationContext = application.applicationContext
 
     private var initialSynchronizationOccured = false   // <TODO> keep / no keep ?
 
-    private val database: ArticleDatabase = ArticleDatabase.getDatabase(application)
-    private val databaseDao: ArticleDao = database.getDao()
 
-    val liveArticles: LiveData<List<Article?>> = databaseDao.selectAllLiveData()
-    private val staticUrlsArticles: List<String> = application.resources.getStringArray(R.array.articles_urls).toList()
-    // other data class and its static urls
 
+
+    fun <T> concatenate(vararg lists: List<T>): List<T> {
+        return listOf(*lists).flatten()
+    }
 
     fun selectArticleByPrimaryKey(detailedArticleURL: String): LiveData<Article?> {
         return databaseDao.selectByIdLiveData(detailedArticleURL)
     }
 
-    fun selectArticlesByQuery(query: String): LiveData<Article?> {
+
+    fun removeObserversFromQueryLiveData(owner: androidx.lifecycle.LifecycleOwner) {
+        queryLiveData?.removeObservers(owner)
+        queryLiveData = null
+    }
+
+    fun selectArticlesByQuery(query: String): LiveData<List<Article?>> {
         // this can work by way of multiple database queries, then eliminating duplicates, ordering based on priorities, etc.
 
-        TODO("more difficult at this point to decide")
+        val filterByCategory = databaseDao.selectByCategoryLiveData(query).value
+        val filterByTitle = databaseDao.selectByTitleLiveData(query).value
+        val filterByAuthor = databaseDao.selectByAuthorLiveData(query).value
+        val filterByCreationTime = databaseDao.selectByDatetimeLiveData(query).value
+
+        Log.d("MERGER", "Category: $filterByCategory")
+        Log.d("MERGER", "Title: $filterByTitle")
+        Log.d("MERGER", "Author: $filterByAuthor")
+        Log.d("MERGER", "Datetime: $filterByCreationTime")
+
+
+
+        val accumulator = listOf<Article?>()
+
+        filterByCategory?.let {
+            concatenate(accumulator, it)
+        }
+        filterByTitle?.let {
+            concatenate(accumulator, it)
+        }
+        filterByAuthor?.let {
+            concatenate(accumulator, it)
+        }
+        filterByCreationTime?.let {
+            concatenate(accumulator, it)
+        }
+
+        Log.d("MERGER", "All: $accumulator")
+
+        //return accumulator
+
+        queryLiveData = databaseDao.selectByCategoryOrTitleOrAuthorOrDatetimeLiveData(query)
+        return queryLiveData!!
     }
 
 
