@@ -3,24 +3,17 @@ package ro.rsbideveloper.rsbi
 import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.content.Intent
-import android.content.IntentFilter
+import android.app.usage.StorageStatsManager
 import android.os.Build
 import android.os.Bundle
+import android.os.storage.StorageManager
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.bumptech.glide.Glide
-import io.ktor.client.*
-import io.ktor.client.engine.cio.*
-import io.ktor.client.request.*
-import io.ktor.client.statement.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import org.jsoup.Jsoup
-import ro.rsbideveloper.rsbi.data.article.Article
-import ro.rsbideveloper.rsbi.data.pageHTML.PageHTML
-import ro.rsbideveloper.rsbi.data.pageHTML.PageHTMLViewModel
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.navigation.NavigationView
 import ro.rsbideveloper.rsbi.databinding.MainActivityBinding
 import ro.rsbideveloper.rsbi.test.*
 
@@ -108,208 +101,78 @@ import ro.rsbideveloper.rsbi.test.*
     //                binding.serviceComState.text = "Service is started with data being passed: ${binding.serviceComInput.text.toString()}"
     //            }
     //        }
+// <TODO> any receiver then ? such as for alarm
+    //    private lateinit var broadcastReceiver: AirplaneModeChangedBroadcastReceiver
+// <TODO> setting the toolbar
+// <TODO> I still think that the MainActivity should be the one to create an instance of the database,
+    //  such that it could also be the done to handle background processes and requests for resynchronization
+// which would happen irrespective of the current Fragment
+// <TODO> at the moment, if there isn't an internet connection, the library throws an uncaught error and the app crashes
+    // it should try to access the Internet and synchronize; if it fails, it will register a listener and upon Internet connection,
+    // will attempt to download; it will keep a list of what has been synchronized and what not; the interrupt granularity will be
+    // a page request
+        //        broadcastReceiver = AirplaneModeChangedBroadcastReceiver()  // <TODO> supposedly there was something about a memory leak unless
+        //                // the broadcastReceiver is unregistered in the onStop() lifecycle milestone / step
+        //        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
+        //            registerReceiver(broadcastReceiver, it)
+        //        }
+// <TODO> DRAWER LAYOUT AND NAVIGATION DRAWER
+    //  val navigationView = AppBarConfiguration(binding.MainActivityRootFragmentHost.findNavController().graph, binding.MainActivityRoot)
+// <TODO> ALARM, NOTIFICATIONS, BROADCAST
+    //  CreateNotificationManager()
+    // private fun CreateNotificationManager() {
+    //        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    //            val name: CharSequence = "Reminder Channel"
+    //            val channel = NotificationChannel(AlarmReceiver.channelId, name, NotificationManager.IMPORTANCE_HIGH)
+    //            channel.description = "A simple description"
+    //
+    //            val notificationManager = getSystemService(NotificationManager::class.java)
+    //        }
+    //    }
+// <TODO> check if the registration link has a particular structure, so it could be extracted and presented directly into the
+    // RecyclerView for faster access; then add markers for events that the app knows it is registered for; also add markers
+    // for events that the app knows it has an alarm for
+// <TODO> hide the Register and Alarm buttons in those articles that are not actually "events"
+// <TODO> set maximum number of lines on title TextView: articles: 3 lines, others without author: maybe 4-5
+// <TODO> in the offline mode of the WebView, can the errors of things which couldn't be loaded be hidden ?
+// <TODO> for setting the alarm for an event, I think that just a few of the events will be able to have automatic alarms (if any...),
+    // so there should be an indication ~ "alarm Auto" and "alarm Manual"; besides, note that any event should be able to
+    // have multiple alarms (!)
 // <TODO>
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: MainActivityViewModel
     private lateinit var binding: MainActivityBinding
-    private lateinit var viewModel: PageHTMLViewModel
-    private lateinit var broadcastReceiver: AirplaneModeChangedBroadcastReceiver
-    private val articles: MutableList<Article> = mutableListOf()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
-//        val navController = navHostFragment.navController
-//
-//
-//        /// DRAWER LAYOUT AND NAVIGATION DRAWER
-//        val drawerLayout = findViewById<DrawerLayout>(R.id.MainActivity_layout)
-//        binding.MainActivityLayout
-//        val appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
-//
-//
-//        val navHostFragment2 =
-//            supportFragmentManager.findFragmentById(R.id.MainActivity_fragment_host) as NavHostFragment
-//        val navController2 = navHostFragment.navController
-//        findViewById<NavigationView>(R.id.MainActivity_navigation_view)
-//            .setupWithNavController(navController2)
-
-
+        /// ViewModel initialization
         viewModel = ViewModelProvider.AndroidViewModelFactory
-            .getInstance(applicationContext as Application).create(PageHTMLViewModel::class.java)
+            .getInstance(applicationContext as Application).create(MainActivityViewModel::class.java)
+        viewModel.initialSynchronization()  // <TODO> this will handle setting up the behaviour in case of a lack of Internet connection
 
+        /// Navigation initialization
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.MainActivity_root_fragmentHost) as NavHostFragment
+        val navController = navHostFragment.navController
+        findViewById<NavigationView>(R.id.MainActivity_navigation_view)
+            .setupWithNavController(navController)
 
-//        // <TODO> EXPERIMENTAL, getting HTML of pages
-////        runBlocking {
-////            getAllPages()
-////        }
+        /// Cache and Persistent storage ??
 
-        broadcastReceiver = AirplaneModeChangedBroadcastReceiver()  // <TODO> supposedly there was something about a memory leak unless
-                // the broadcastReceiver is unregistered in the onStop() lifecycle milestone / step
-        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
-            registerReceiver(broadcastReceiver, it)
-        }
-
-
-        /// ALARM, NOTIFICATIONS, BROADCAST
-        CreateNotificationManager()
-
-
-        /// DOM parsing
-        runBlocking(Dispatchers.IO) {
-            synchronizeFeed()
-        }
-    }
-
-    private fun extractArticles(codeHTML: String) {
-        val document = Jsoup.parse(codeHTML)
-        val articles = document.body().select("article")
-
-        for(article in articles) {
-            val title = article.select(".entry-title a").attr("title")
-            val detailedArticleURL = article.select(".entry-title a").attr("href")
-            val imgURL = article.select(".card-image img").attr("src")  // <TODO> might be missing, not all articles have a photo
-            val content = article.select(".entry-summary p").text().toString().replace("Read more…", "", true) // <TODO> remove "Read more"
-            val category = article.select(".category").text()
-            val categoryURL = article.select(".category").attr("href")  // <TODO> missing
-            val author = article.select("div .author a").attr("title")  // <TODO> there is the alternative with <b>.text()
-            val authorURL = article.select("div .author a").attr("href")
-            val creationTime = article.select(".entry-date").attr("datetime")
-            val latestModificationTime = article.select(".updated").attr("datetime")
-
-            Log.d("ARTICLES",
-                "Title: $title\n" +
-                    "DetailedArticleURL: $detailedArticleURL\n" +
-                    "Image URL: $imgURL\n" +
-                    "Content: $content\n" +
-                    "Category: $category\n" +
-                    "Category URL: $categoryURL\n" +
-                    "Author: $author\n" +
-                    "Author URL: $authorURL\n" +
-                    "Creation Time: $creationTime\n" +
-                    "Latest Modification Time: $latestModificationTime\n")
-
-            Glide
-                .with(this)
-                .load(imgURL)
-                .centerCrop()
-                .placeholder(R.drawable.ic_baseline_search_24)
-                .into(binding.MainActivityImageTest)
-
-            binding.textView5.text = title
-            binding.textView6.text = imgURL
-            binding.textView7.text = category
-            binding.textView8.text = content
-        }
-
-
-
-    }
-
-    private suspend fun synchronizeFeed() {
-            // <TODO> Order of asynchronous retrieval, one page request at a time, but
-                // asynchronously synchronized with the (Ui -> observe: ViewModel)
-
-        // RSBI events
-        // External events
-        // Public engagement
-        // Blog
-        // Job offers
-
-        val URLs = resources.getStringArray(R.array.articles_urls)
-
-//        <string-array name="events_or_feed">
-//        <item>https://www.rsbi.ro/category/rsbi-events/</item>
-//        <item>https://www.rsbi.ro/category/external-events/</item>
-//        <item>https://www.rsbi.ro/category/public-engagement/</item>
-//        <item>https://www.rsbi.ro/category/blog/</item>
-//        <item>https://www.rsbi.ro/category/current-job-offers/</item>
-
-        for(URL in URLs) {
-            Log.d("SYNCFEED", "Synchronizing $URL")
-            try {
-                val codeHTML = getHTML(URL)
-//                Log.d("SYNCFEED", "HTML code: $codeHTML")
-
-                // <TODO> compute its hash or whatever is needed to check for updates in future requests
-                    // this is related to learning about HTTP requests and how the UPDATE request / method works
-
-                // <TODO> parse the HTML and extract the <article> tags; check for Next <a> and get those as well,
-                    // corroborating the data (from all URLs ?) in a single list
-//                val pageHTML = PageHTML(0, URL, codeHTML)
-//                viewModel.addPageHTML(pageHTML)
-//                Log.d("VIEWMODEL", "Added a local copy of the URL ${URL}")
-
-                extractArticles(codeHTML)
-
-            } catch(e: Exception) {
-                Log.d("SYNCFEED", "Exception: ${e.message}")
-            }
-        }
-    }
-
-
-    suspend fun getAllPages() {
-        val pagesHtml: MutableList<String> = mutableListOf()
-        val URLs = resources.getStringArray(R.array.RSBI_pages_URLs)
-        for(URL in URLs) {
-            Log.d("TAG", "URLs list: ${URL}")
-            try {
-                val content = getHTML(URL)
-                Log.d("CONTENT", content)
-
-                // <TODO> add to a database, check for update, etc.
-                val pageHTML = PageHTML(0, URL, content)
-                viewModel.addPageHTML(pageHTML)
-                Log.d("VIEWMODEL", "Added a local copy of the URL ${URL}")
-
-            } catch(e: Exception) {
-                Log.d("TAG", "Exception: ${e.message}")
-            }
-        }
-        Log.d("TAG", pagesHtml.size.toString())
-    }
-
-    suspend fun getHTML(URL: String): String {
-        val client = HttpClient(CIO)
-        val response: HttpResponse = client.get(URL)
-        //        Log.d("TAG", response.toString())
-        //        Log.d("TAG", response.headers.toString())
-        //        Log.d("TAG", response.call.toString())
-
-        var content = StringBuilder()
-        var line: String? = ""
-
-        while(line != null) {
-            //            Log.d("TAG", line)
-            content.append(line)
-            line = response.content.readUTF8Line(10000)
-        }
-        client.close()
-
-        return content.toString()
     }
 
 
     override fun onStop() {
         super.onStop()
-        unregisterReceiver(broadcastReceiver)
+//        unregisterReceiver(broadcastReceiver)
     }
 
-    private fun CreateNotificationManager() {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name: CharSequence = "Reminder Channel"
-            val channel = NotificationChannel(AlarmReceiver.channelId, name, NotificationManager.IMPORTANCE_HIGH)
-            channel.description = "A simple description"
-
-            val notificationManager = getSystemService(NotificationManager::class.java)
-        }
-    }
 }
 
 /// <TODO> Leftover code
@@ -363,23 +226,3 @@ class MainActivity : AppCompatActivity() {
 //                || super.onSupportNavigateUp()
 //    }
 //
-
-/// ??
-//    private fun getHtmlFromWeb() {
-//        Thread(Runnable {
-//            val stringBuilder = StringBuilder()
-//            try {
-//                val doc: Document = Jsoup.connect("http://www.tutorialspoint.com/").get()
-//                val title: String = doc.title()
-//                val links: Elements = doc.select("a[href]")
-//                stringBuilder.append(title).append("\n")
-//                for (link in links) {
-//                    stringBuilder.append("\n").append("Link :
-//                        ").append(link.attr("href")).append("\n").append("Text : ").append(link.text())
-//                }
-//            } catch (e: IOException) {
-//                stringBuilder.append("Error : ").append(e.message).append("\n")
-//            }
-//            runOnUiThread { textView.text = stringBuilder.toString() }
-//        }).start()
-//    }

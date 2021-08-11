@@ -1,6 +1,6 @@
 [
   {
-    "name": "nav_graph",
+    "name": "main_activity_nav_graph",
     "navigationXmlIds": [],
     "deepLinks": []
   }

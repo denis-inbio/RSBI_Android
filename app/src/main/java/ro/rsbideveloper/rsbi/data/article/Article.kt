@@ -16,5 +16,6 @@ data class Article (
     val author: String, // div.a
     val authorURL: String,  // div.a (same, among attributes)
     val creationTime: String,   // div.a.a.time1
-    val latestModificationTime: String  // div.a.a.time2
+    val latestModificationTime: String,  // div.a.a.time2
+    val language: String    // <TODO> <!DOCTYPE HTML><html lang="en-GB" or lang="ro-RO" ...>
 )

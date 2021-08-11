@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["ro.rsbideveloper.rsbi.ui.entrypointAnonymousUser.AnonymousUserNavViewArticleListDirections"]}]
+[{"navFile":"src\\main\\res\\navigation\\main_activity_nav_graph.xml","javaFiles":["ro.rsbideveloper.rsbi.ui.article.SearchListDirections","ro.rsbideveloper.rsbi.ui.article.OnlineDetailedArgs","ro.rsbideveloper.rsbi.ui.article.OfflineDetailedArgs"]}]
